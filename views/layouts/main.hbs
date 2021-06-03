@@ -1,0 +1,40 @@
+{{> head}}
+<body class="page">
+    <header class="index">
+        <div class="index__port">
+            <div class="index__logo">
+                <span class="index__element"></span>
+                <span class="index__slogan">Юрист-на-Дону</span>
+            </div>
+            <div class="index__menu">
+                <nav class="navbar navbar-expand-lg index__cm-menu-box">
+                    <div class="container-fluid index__cm-fluid-box">
+                        {{> humburger}}
+                        <div 
+                            class="collapse navbar-collapse index__cm-dropdown" 
+                            id="navbarSupportedContent"
+                        >
+                            {{> menu}}
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="index__support">
+                <div class="index__call"></div>
+                <div class="index__number">+7 (951) 839-59-39</div>
+            </div>
+        </div>
+        <div class="index__background"></div>
+    </header>
+    <main class="page__content">
+        {{{body}}}
+    </main>
+    <footer class="page__footer">
+
+    </footer>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+        crossorigin="anonymous">
+    </script>
+</body>

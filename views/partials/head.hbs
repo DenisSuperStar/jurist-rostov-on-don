@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <!-- Подключение бутстрап -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+        crossorigin="anonymous"
+    >
+    <!-- Стили компонентов -->
+
+    <!-- Подключение шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Подключение иконного шрифта -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <style>
+        .index {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .index__port {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 8;
+        }
+
+        .index__logo {
+            display: flex;
+        }
+
+        .index__element {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0d6efd;
+            color: #fff;
+            width: 50px;
+            height: 60px;
+        }
+        .index__element::after {
+            content: '\f42a';
+            font-family: 'Font Awesome 5 Brands';
+            font-size: 27px;
+        }
+
+        .index__slogan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 215px;
+            height: 60px;
+            font-size: 17px;
+            font-weight: 900;
+            background: transparent;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .index__menu {
+            margin-left: auto;
+            height: 60px;
+        }
+
+        .index__cm-fluid-box {
+            padding: 0;
+        }
+
+        .index__support {
+            display: flex;
+            padding: 0 0 0 50px;
+        }
+
+        .index__call {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 61px;
+            height: 60px;
+            background: #0d6efd;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .index__call::after {
+            content: '\f879';
+            font-family: 'Font Awesome 5 Pro';
+            transform: rotate(8deg);
+            font-weight: 300;
+        }
+
+        .index__number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 169px;
+            height: 60px;
+            background: #000;
+            color: #fff;
+            font-size: 17px;
+        }
+
+        .index__cm-item {
+            padding: 0 35px 0 0;
+        }
+
+        .index__cm-item:last-child {
+            padding-right: 0;
+        }
+
+        .index__cm-link {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 600;
+            padding-right: 0 !important;
+            color: #fff;
+        }
+
+        .index__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            height: 750px;
+            background-image: url('../../assets/Rostov-on-Don.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
