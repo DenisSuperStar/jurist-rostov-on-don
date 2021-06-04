@@ -34,6 +34,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 8;
+            padding-bottom: 60px;
         }
 
         .index__logo {
@@ -61,11 +62,12 @@
             align-items: center;
             width: 215px;
             height: 60px;
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 900;
             background: transparent;
             color: #fff;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .index__menu {
@@ -148,6 +150,109 @@
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
+        }
+
+        .single-slider,
+        .single-slider__item {
+            position: relative;
+        }
+
+        .single-slider__item {
+            padding-top: 130px;
+            padding-left: 93px;
+        }
+
+        .single-slider__description-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 170px;
+            margin-left: 160px;
+        }
+
+        .single-slider__attribute {
+            background: #0d6efd;
+            width: 148.5px;
+            height: 148.5px;
+        }
+
+        .single-slider__item-title,
+        .single-slider__item-text {
+            display: block;
+            color: #fff;
+            line-height: normal;
+        }
+
+        .single-slider__item-title {
+            font-size: 55px;
+            max-width: 500px;
+        }
+
+        .single-slider__item-text {
+            font-size: 25px;
+            max-width: 570px;
+            padding-top: 37.5px;
+        }
+
+        .slick-list {
+            max-height: 690px;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slick-track {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        .slick-slide {
+            display: block;
+            float: left;
+            height: 700px;
+            min-height: 1px;
+            overflow: hidden;
+        }
+        /*
+            Стили для точек
+        */
+        .slick-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 150px;
+            display: flex;
+            max-width: 1260px;
+            margin: 0 132px;
+            padding: 0 30px;
+            list-style: none;
+        }
+
+        .slick-dots > li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px 0 0;
+        }
+
+        .slick-dots > li > button {
+            width: 10px;
+            height: 10px;
+            border: none;
+            color: transparent;
+            background: #fff;
+            border-radius: 0;
+        }
+
+        li.slick-active > button {
+            background: #0d6efd;
         }
     </style>
 </head>
