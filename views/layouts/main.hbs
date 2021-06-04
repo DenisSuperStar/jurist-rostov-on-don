@@ -26,6 +26,46 @@
         </div>
         <div class="index__background-color"></div>
         <div class="index__background"></div>
+        <div class="index__slider-box">
+            <div class="single-slider">
+                <div class="single-slider__item">
+                    <div class="single-slider__attribute"></div>
+                    <div class="single-slider__description-box">
+                        <span class="single-slider__item-title">
+                            Лучшие юристы в своей области
+                        </span>
+                        <span class="single-slider__item-text">
+                            Мы сотрудничаем с клиентами, коллегами 
+                            и заинтересованными сторонами, чтобы общаться,
+                            делиться друг с другом опытом.
+                        </span>
+                    </div>
+                </div>
+                <div class="single-slider__item">
+                    <div class="single-slider__attribute"></div>
+                    <div class="single-slider__description-box">
+                        <span class="single-slider__item-title">
+                            Баланс качества и роста
+                        </span>
+                        <span class="single-slider__item-text">
+                            Мы с интересом подходим к решению сложных задач компании
+                        </span>
+                    </div>
+                </div>
+                <div class="single-slider__item">
+                    <div class="single-slider__attribute"></div>
+                    <div class="single-slider__description-box">
+                        <span class="single-slider__item-title">
+                            Мы можем помочь каждому
+                        </span>
+                        <span class="single-slider__item-text">
+                            Наши специалисты готовы в любой момент выполнить анализ ваших задачи,
+                            обсудить сроки выполнения и стоимость услуги
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="page__content">
         {{{body}}}
@@ -33,9 +73,28 @@
     <footer class="page__footer">
 
     </footer>
+    <!-- include bootstrap -->
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
         crossorigin="anonymous">
+    </script>
+    <!-- include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- include slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- init slider with slick -->
+    <!-- <script src="../../slider/initSlider.js"></script> -->
+    <script>
+        $('.single-slider').slick({
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            arrows: false,
+            dots: true,
+            infinite: true,
+            mobileFirst: true,
+            pauseOnDotsHover: true
+        });
     </script>
 </body>
