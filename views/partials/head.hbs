@@ -195,7 +195,7 @@
         }
 
         .slick-initialized {
-            height: 632px;
+            height: 630px;
         }
 
         .slick-list {
@@ -205,6 +205,7 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
+            pointer-events: none;
         }
 
         .slick-track {
@@ -257,6 +258,112 @@
 
         li.slick-active > button {
             background: #0d6efd;
+        }
+
+        .grid {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .grid__cm-column-more,
+        .grid__cm-column-less {
+            padding: 0;
+        }
+
+        .grid__cm-column-more {
+            padding: 7.5rem 3.75rem 7.5rem 30px;
+        }
+
+        .grid__cm-column-less {
+            position: relative;
+        }
+
+        .grid__img-box {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .grid__text-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .grid__head {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding-bottom: 1.5rem;
+            color: #0d6efd;
+            text-transform: uppercase;
+        }
+
+        .grid__text {
+            display: block;
+            font-size: 35px;
+            color: #191919;
+            font-weight: 700;
+            padding-bottom: 45.6px;
+        }
+
+        .grid__btn-box {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .grid__btn-link {
+            color: #fff;
+            box-shadow: 0 0 0 3em #0d6efd inset;
+            text-decoration: none;
+            transition: all 300ms ease;
+        }
+
+        .grid__btn-link:hover {
+            background: #fff;
+            color: #0d6efd;
+            box-shadow: 0 0 0 1px #0d6efd inset;
+            text-decoration: none;
+        }
+
+        .grid__btn-text {
+            display: block;
+            padding: 1.4em 1.7em;
+        }
+
+        .cm-card {
+            width: 310px;
+            background: rgba(13, 110, 253, 0.25);
+            padding-top: 51.8px;
+            border: none;
+            border-radius: 0;
+        }
+
+        .page__gallery-box {
+            padding-top: 105px;
+            padding-bottom: calc((3.75em * 2) - 1.5rem)
+        }
+
+        .page__card-box {
+            padding-bottom: 1.5rem;
+        }
+
+        .cm-card__img {
+            width: 50px;
+            height: 50px;
+            margin-left: calc(3.7em * .5);
+        }
+
+        .cm-card__title {
+            font-size: 1.7em;
+            text-transform: uppercase;
+            color: #191919;
+        }
+
+        .cm-card__text {
+            font-size: 14px;
+            color: #191919;
         }
     </style>
 </head>
