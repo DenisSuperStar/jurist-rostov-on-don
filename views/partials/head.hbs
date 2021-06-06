@@ -350,6 +350,10 @@
             padding-bottom: 1.5rem;
         }
 
+        .page__submiter-box {
+            padding-top: 3.75em;
+        }
+
         @media screen and (min-width: 1401px) {
             .page__cm-grid-about {
                 padding-left: 11px;
@@ -438,6 +442,8 @@
             width: calc(50% + 3px);
             padding-top: 7.5rem;
             padding-right: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(270deg, #000, #fff);
         }
 
         .cm-description-service__item {
@@ -445,14 +451,101 @@
         }
 
         .cm-description-service__block {
+            position: relative;
             width: 100%;
             height: 189px;
             border: 1px solid;
         }
 
+        .cm-description-service__block.is-item-1 {
+            border-right: 1px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
+        .cm-description-service__block.is-item-2 {
+            border-left: 1px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
+        .cm-description-service__block.is-item-3 {
+            border-right: 1px solid #fff;
+        }
+        .cm-description-service__block.is-item-4 {
+            border-left: 1px solid #fff;
+        }
+
+        .cm-description-service__text-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .cm-description-service__text-title,
+        .cm-description-service__text-main,
+        .cm-description-service__info {
+            display: flex;
+            width: 312px;
+            color: #fff;
+        }
+
+        .cm-description-service__text-title,
+        .cm-description-service__info {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        
+        .cm-description-service__text-title {
+            padding-top: 3.2rem;
+            justify-content: center;
+        }
+
+        .cm-description-service__text-main,
+        .cm-description-service__info {
+            font-size: 17px;
+            justify-content: flex-end;
+            padding-right: 0.23rem;
+        }
+
+        .cm-description-service__info.is-warning {
+            color: #ff2800;
+        }
+
         .cm-description-service__img {
             width: 100%;
             height: 100%;
+        }
+
+        /*
+            Продолжим с этого места
+        */
+
+        .cm-submiter {
+            background: #0d6efd;
+        }
+
+        .cm-submiter__container {
+            padding-left: 3.75rem;
+        }
+
+        .cm-submiter__title {
+            display: block;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding-top: 15rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .cm-submiter__input {
+            width: 296px;
+            height: 54.4px;
+            border-radius: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+        }
+
+        .cm-submiter__singing {
+            color: #fff;
         }
     </style>
 </head>
