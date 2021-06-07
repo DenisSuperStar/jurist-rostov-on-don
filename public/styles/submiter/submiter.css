@@ -58,11 +58,9 @@
 }
 
 .cm-submiter__col-next {
-    width: calc(65% + 12px);
     padding-top: 7.5rem;
     padding-left: 0;
     padding-right: 0;
-    margin-left: -120px;
 }
 
 .cm-submiter__img {

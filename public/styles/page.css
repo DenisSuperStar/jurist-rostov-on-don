@@ -11,6 +11,10 @@
     margin-top: 3.75rem;
 }
 
+.page__cm-col-next {
+    padding-right: 20px;
+}
+
 @media screen and (min-width: 1401px) {
     .page__cm-grid-about {
         padding-left: 11px;

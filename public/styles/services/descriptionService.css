@@ -1,9 +1,9 @@
 .cm-description-service {
     width: calc(50% + 3px);
     padding-top: 7.5rem;
+    padding-left: 0;
     padding-right: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(270deg, #000, #fff);
 }
 
 .cm-description-service__item {
