@@ -1,0 +1,18 @@
+.page__gallery-box {
+    padding-top: 105px;
+    padding-bottom: calc((3.75em * 2) - 1.5rem)
+}
+
+.page__card-box {
+    padding-bottom: 1.5rem;
+}
+
+.page__submiter-box {
+    margin-top: 3.75rem;
+}
+
+@media screen and (min-width: 1401px) {
+    .page__cm-grid-about {
+        padding-left: 11px;
+    }
+}

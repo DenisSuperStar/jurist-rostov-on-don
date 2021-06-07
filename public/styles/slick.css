@@ -1,0 +1,63 @@
+.slick-initialized {
+    height: 630px;
+}
+
+.slick-list {
+    max-height: 690px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+}
+
+.slick-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.slick-slide {
+    display: block;
+    float: left;
+    height: 700px;
+    min-height: 1px;
+    overflow: hidden;
+}
+
+.slick-dots {
+    position: absolute;
+    top: calc(100% - 120px);
+    left: 0;
+    right: 0;
+    display: flex;
+    max-width: 1260px;
+    margin: 0 132px;
+    padding: 0 30px;
+    list-style: none;
+}
+
+.slick-dots > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 0 0;
+}
+
+.slick-dots > li > button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    color: transparent;
+    background: #fff;
+    border-radius: 0;
+}
+
+li.slick-active > button {
+    background: #0d6efd;
+}

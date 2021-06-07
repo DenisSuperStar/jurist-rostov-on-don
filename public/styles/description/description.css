@@ -1,0 +1,60 @@
+.description {
+    background: url('../../assets/office.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.description__header {
+    display: flex;
+    flex-direction: column;
+}
+
+.description__item-box {
+    padding-top: 1.875em;
+}
+
+.description__item {
+    padding-bottom: 1.875em;
+}
+
+.description__item:last-child {
+    padding: 0;
+}
+
+.description__title {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 8rem;
+    padding-bottom: 1.5rem;
+}
+
+.description__text {
+    font-size: 35px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.description__icon {
+    width: 60px;
+    height: 60px;
+}
+
+.description__text-item-head {
+    display: block;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 8px;
+}
+
+.description__text-item-main {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+}
