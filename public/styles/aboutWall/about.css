@@ -1,0 +1,128 @@
+.about {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about__text-info {
+    margin-right: -60px;
+}
+
+.about__cm-col-box {
+    position: relative;
+    padding: 240px 120px 7.5rem 30px;
+    z-index: 8;
+    margin-right: -120px;
+    background: #fff;
+}
+
+.about__up-icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    top: 0;
+    right: 0;
+    background: #0d6efd;
+}
+
+.about__up-icon::after {
+    font-size: 3.75em;
+    color: #fff;
+}
+
+.about__up-icon.is-balance-scale::after {
+    content: '\f24e';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.about__up-icon.is-handshake::after {
+    content: '\f2b5';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.about__cm-col-img {
+    width: calc(50% + 120px);
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 1px solid rgb(13, 110, 253, 0.25);
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.about__img-box {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.about__cm-img.is-strong {
+    background-image: url('../../assets/strong.jpg');
+}
+
+.about__cm-img.is-justice {
+    background: url('../../assets/justice.jpg');
+}
+
+.about__cm-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.about__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.about__head {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    color: #0d6efd;
+    text-transform: uppercase;
+}
+
+.about__text {
+    display: block;
+    font-size: 35px;
+    color: #191919;
+    font-weight: 700;
+    padding-bottom: 45.6px;
+}
+
+.about__btn-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about__btn-link {
+    color: #fff;
+    box-shadow: 0 0 0 3em #0d6efd inset;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+.about__btn-link:hover {
+    background: #fff;
+    color: #0d6efd;
+    box-shadow: 0 0 0 1px #0d6efd inset;
+    text-decoration: none;
+}
+
+.about__btn-text {
+    display: block;
+    padding: 1.4em 1.7em;
+}

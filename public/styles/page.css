@@ -1,6 +1,10 @@
+.page__balance {
+    padding-bottom: 7.5em;
+}
+
 .page__gallery-box {
     padding-top: 105px;
-    padding-bottom: calc((3.75em * 2) - 1.5rem)
+    padding-bottom: calc((3.75em * 2) - 1.5rem);
 }
 
 .page__card-box {
