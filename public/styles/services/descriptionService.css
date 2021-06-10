@@ -32,33 +32,33 @@
     border-left: 1px solid #fff;
 }
 
-.cm-description-service__text-box {
+.cm-description-service__multiple-text {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.cm-description-service__text-title,
-.cm-description-service__text-main,
+.cm-description-service__bottom-text,
+.cm-description-service__main-text,
 .cm-description-service__info {
     display: flex;
     width: 312px;
     color: #fff;
 }
 
-.cm-description-service__text-title,
+.cm-description-service__bottom-text,
 .cm-description-service__info {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.cm-description-service__text-title {
+.cm-description-service__bottom-text {
     padding-top: 3.2rem;
     justify-content: center;
 }
 
-.cm-description-service__text-main,
+.cm-description-service__main-text,
 .cm-description-service__info {
     font-size: 17px;
     justify-content: flex-end;
