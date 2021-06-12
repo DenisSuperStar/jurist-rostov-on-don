@@ -1,0 +1,25 @@
+{{#each direction}}
+    <div class="container-fluid direction">
+        <div class="row">
+            <div class="col-6 direction__equally">
+                <div class="direction__icon" id="is-{{sectionId}}"></div>
+                <div class="direction__info">
+                        <h2 class="direction__title" id="title-{{id}}">{{header}}</h2>
+                    <div class="direction__description-box">
+                        <span class="direction__description">{{directionName}}</span>
+                    </div>
+                    <div class="direction__btn-box">
+                        <a href="#" class="direction__btn" title="{{title}}">
+                            <span class="direction__btn-info">{{title}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 direction__container">
+                <div class="direction__image-box">
+                    <div class="direction__bg-image" style="background-image: url('{{imageUrl}}')"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}
