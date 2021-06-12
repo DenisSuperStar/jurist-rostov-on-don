@@ -1,77 +1,11 @@
 {{> headView}}
 <body class="page">
-    <header class="index">
-        <div class="index__port">
-            <div class="index__logo">
-                <span class="index__element"></span>
-                <span class="index__slogan">Юрист-на-Дону</span>
-            </div>
-            <div class="index__menu">
-                <nav class="navbar navbar-expand-lg index__cm-menu-box">
-                    <div class="container-fluid index__cm-fluid-box">
-                        {{> humburger}}
-                        <div 
-                            class="collapse navbar-collapse index__cm-dropdown" 
-                            id="navbarSupportedContent"
-                        >
-                            {{> menu}}
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="index__support">
-                <div class="index__call"></div>
-                <div class="index__number">+7 (951) 839-59-39</div>
-            </div>
-        </div>
-        <div class="index__background-color"></div>
-        <div class="index__background"></div>
-        <div class="index__slider-box">
-            <div class="single-slider">
-                <div class="single-slider__item">
-                    <div class="single-slider__attribute"></div>
-                    <div class="single-slider__description-box">
-                        <span class="single-slider__item-title">
-                            Лучшие юристы в своей области
-                        </span>
-                        <span class="single-slider__item-text">
-                            Мы сотрудничаем с клиентами, коллегами 
-                            и заинтересованными сторонами, чтобы общаться,
-                            делиться друг с другом опытом.
-                        </span>
-                    </div>
-                </div>
-                <div class="single-slider__item">
-                    <div class="single-slider__attribute"></div>
-                    <div class="single-slider__description-box">
-                        <span class="single-slider__item-title">
-                            Баланс качества и роста
-                        </span>
-                        <span class="single-slider__item-text">
-                            Мы с интересом подходим к решению сложных задач компании
-                        </span>
-                    </div>
-                </div>
-                <div class="single-slider__item">
-                    <div class="single-slider__attribute"></div>
-                    <div class="single-slider__description-box">
-                        <span class="single-slider__item-title">
-                            Мы можем помочь каждому
-                        </span>
-                        <span class="single-slider__item-text">
-                            Наши специалисты готовы в любой момент выполнить анализ ваших задачи,
-                            обсудить сроки выполнения и стоимость услуги
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    {{> header}}
     <main class="content">
         {{{body}}}
     </main>
     <footer class="footer">
-
+        <!-- В этом месте должен быть футер сайта -->
     </footer>
     <!-- include bootstrap -->
     <script 
