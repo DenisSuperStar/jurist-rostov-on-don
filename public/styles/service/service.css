@@ -1,0 +1,144 @@
+.service__visible-description {
+    padding-left: 0.35em;
+    padding-right: 1.7em;
+}
+
+.service__description-box {
+    background: url('../../assets/office.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.service__title {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 8rem;
+    padding-bottom: 1.5rem;
+}
+
+.service__text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.service__text {
+    font-size: 33.8px;
+    color: #fff;
+    line-height: 1.2; 
+}
+
+.service__item-box {
+    padding-top: 1.875em; 
+}
+
+.service__item {
+    padding-bottom: 1.875em;
+}
+
+.service__item:last-child {
+    padding: 0;
+}
+
+.service__image-size {
+    width: 60px;
+    height: 60px; 
+}
+
+.service__head {
+    display: block;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 8px;
+}
+
+.service__foundation {
+    display: block;
+    font-size: 14px;
+    color: #fff;  
+}
+
+.service__gallery {
+    width: calc(50% + 3px);
+    padding-top: 7.5rem;
+    padding-left: 0;
+    padding-right: 0.35em;
+}
+
+.service__gallery-item-box {padding: 0;}
+
+.service__gallery-item {
+    position: relative;
+    width: 100%;
+    height: 189px;
+    border: 1px solid;
+}
+
+.service__gallery-item.is-item-1 {
+    border-right: 1px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.service__gallery-item.is-item-2 {
+    border-left: 1px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.service__gallery-item.is-item-3 {
+    border-right: 1px solid #fff;
+}
+
+.service__gallery-item.is-item-4 {
+    border-left: 1px solid #fff;
+}
+
+.service__gallery-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.service__bg-text {
+    display: block;
+    width: 312px;
+    font-size: 17px;
+    color: #fff;
+    padding-right: 0.23rem;
+    text-align: right;
+}
+
+.service__bg-info {
+    display: block;
+    width: 312px;
+    font-size: 18px;
+    color: #fff;
+    padding-right: 0.23rem;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.service__bg-info--warning {
+    color: #ff2800;
+}
+
+.service__bg-title {
+    display: block;
+    width: 312px;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.service__img-gallery {
+    width: 100%;
+    height: 100%;
+}
