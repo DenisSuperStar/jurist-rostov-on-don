@@ -1,41 +1,68 @@
-.single-slider,
-.single-slider__item {
-    position: relative;
+.bg-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 750px;
+    z-index: -1;
+    background: rgb(13, 110, 253, 0.25); 
 }
 
-.single-slider__item {
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 750px;
+    z-index: -3;
+    background-image: url('../../assets/Rostov-on-Don.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider-text {
+    position: relative;
+    height: 630px;
+}
+
+.slider-text__item {
+    position: relative;
     padding-top: 130px;
     padding-left: 93px;
 }
 
-.single-slider__description-box {
+.slider-text__block {
+    width: 148.5px;
+    height: 148.5px;
+    background: #0d6efd;
+}
+
+.slider-text__description {
     position: absolute;
     top: 0;
     left: 0;
     margin-top: 170px;
-    margin-left: 160px;
+    margin-left: 160px; 
 }
 
-.single-slider__attribute {
-    background: #0d6efd;
-    width: 148.5px;
-    height: 148.5px;
+.slider-text__title-box {
+    max-width: 500px;
 }
 
-.single-slider__item-title,
-.single-slider__item-text {
-    display: block;
+.slider-text__title {
+    font-size: 55px;
     color: #fff;
     line-height: normal;
 }
 
-.single-slider__item-title {
-    font-size: 55px;
-    max-width: 500px;
-}
-
-.single-slider__item-text {
-    font-size: 25px;
+.slider-text__subtitle-box {
     max-width: 570px;
     padding-top: 37.5px;
+}
+
+.slider-text__subtitle {
+    font-size: 25px;
+    color: #fff;
+    line-height: normal;
 }
