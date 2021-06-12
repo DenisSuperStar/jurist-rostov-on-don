@@ -1,9 +1,8 @@
-.index {
+.header {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.index__port {
+.header__port {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,11 +10,11 @@
     padding-bottom: 60px;
 }
 
-.index__logo {
-    display: flex;
+.header__logo {
+    display: flex; 
 }
 
-.index__element {
+.header__block {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,13 +23,14 @@
     width: 50px;
     height: 60px;
 }
-.index__element::after {
+
+.header__block::after {
     content: '\f42a';
     font-family: 'Font Awesome 5 Brands';
     font-size: 27px;
 }
 
-.index__slogan {
+.header__slogan {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,21 +44,21 @@
     letter-spacing: 2px;
 }
 
-.index__menu {
+.header__nav-box {
     margin-left: auto;
     height: 60px;
 }
 
-.index__cm-fluid-box {
+.header__menu-box {
     padding: 0;
 }
 
-.index__support {
+.header__support {
     display: flex;
     padding: 0 0 0 50px;
 }
 
-.index__call {
+.header__call-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,14 +69,14 @@
     font-size: 24px;
 }
 
-.index__call::after {
+.header__call-btn::after {
     content: '\f879';
     font-family: 'Font Awesome 5 Pro';
     transform: rotate(8deg);
     font-weight: 300;
 }
 
-.index__number {
+.header__phone-number {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,6 +87,7 @@
     font-size: 17px;
 }
 
+/*---------------------*/
 .index__cm-item {
     padding: 0 35px 0 0;
 }
@@ -101,27 +102,4 @@
     font-weight: 600;
     padding-right: 0 !important;
     color: #fff;
-}
-
-.index__background-color {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 750px;
-    z-index: -1;
-    background: rgb(13, 110, 253, 0.25);
-}
-
-.index__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 750px;
-    z-index: -3;
-    background-image: url('../../assets/Rostov-on-Don.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
