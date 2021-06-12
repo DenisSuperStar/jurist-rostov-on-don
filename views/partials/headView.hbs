@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <!-- Подключение бутстрап -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+        crossorigin="anonymous"
+    >
+    <!-- Стили компонентов -->
+
+    <!-- Подключение шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Подключение иконного шрифта -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../styles/direction/direction.css">
+    <link rel="stylesheet" href="../../styles/mainContent.css">
+    <link rel="stylesheet" href="../../styles/menuTop/menu.css">
+    <link rel="stylesheet" href="../../styles/singleSlider/singleSlider.css">
+    <link rel="stylesheet" href="../../styles/slick.css">
+    <link rel="stylesheet" href="../../styles/card/card.css">
+    <link rel="stylesheet" href="../../styles/description/description.css">
+    <link rel="stylesheet" href="../../styles/services/descriptionService.css">
+    <link rel="stylesheet" href="../../styles/submiter/submiter.css">
+    <link rel="stylesheet" href="../../styles/contacts/location.css">
+    <style>
+      .page {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .wall {
+        padding-top: 7.5rem;
+        padding-bottom: 1.875rem;
+      }
+
+      .wall__title {
+        font-size: 0.95rem;
+        margin-bottom: 3.5rem;
+        color: #191919;
+        padding-left: 150px;
+      }
+
+      .wall__subtitle-box {
+        margin-bottom: 1.5rem;
+        padding-left: 150px;
+      }
+
+      .wall__subtitle {
+        font-size: 35px;
+        color: #191919;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .is-unified {
+        padding: 0;
+      }
+
+      .wall__item--fill {
+        background: #0d6efd;
+        color: #fff;
+        padding: 120px 60px calc(7.5rem / 2) 150px;
+      }
+
+      .wall__description-box {
+        width: 600px;
+      }
+
+      .wall__description {
+        font-size: 35px;
+      }
+
+      .we__item:first-child > .we__description-box {
+        margin-bottom: 120px;
+      }
+
+      .we__title {
+        font-size: 27.2px;
+        text-transform: uppercase;
+        color: #191919;
+        margin-bottom: calc(.5rem * 4);
+      }
+
+      .we__description-box {
+        width: 300px;
+      }
+
+      .we__description {
+        font-size: 16px;
+        color: #191919;
+      }
+
+      .in-touch {
+        padding-left: 150px;
+      }
+
+      .cm-contact-form {
+        background: #0d6efd;
+        padding: 5rem 3.75rem 7.5rem;
+      }
+
+      .cm-contact-form__item {
+        padding: 0;
+      }
+
+      .cm-contact-form__title {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 1.5rem;
+      }
+
+      .cm-equal {
+        width: 50%;
+        padding-right: 0.5rem;
+      }
+      
+      .cm-equal:last-child {
+        padding-right: calc(0.5rem * .3);
+      }
+
+      .cm-equal:first-child {
+        padding-right: 0.5rem;
+      }
+
+      .cm-contact-form__name-box {
+        padding-bottom: 0.8rem;
+      }
+
+      .cm-contact-form__input-name {
+        font-size: 18px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      .cm-contact-form__input-box {
+        width: 100%;
+        padding-right: 0;
+      }
+
+      .cm-contact-form__input {
+        border-radius: 0;
+        width: 100%;
+        height: 54px;
+        border: none;
+        background: rgba(255, 255, 255, .1);
+      }
+
+      .cm-contact-form__detail {
+        border-radius: 0;
+        width: 100%;
+        border: none;
+        background: rgba(255, 255, 255, .1);
+      }
+
+      .cm-contact-form__input:focus,
+      .cm-contact-form__detail:focus {
+        background: rgba(255, 255, 255, .1);
+      }
+      
+      .cm-contact-form__input::placeholder,
+      .cm-contact-form__input::-webkit-input-placeholder,
+      .cm-contact-form__detail::placeholder,
+      .cm-contact-form__detail::-webkit-input-placeholder {
+        color: #fff;
+      }
+
+      .cm-contact-form__input::-moz-placeholder,
+      .cm-contact-form__detail::-moz-placeholder {
+        color: #fff;
+        opacity: 1;
+      }
+
+      .cm-contact-form__input::-ms-input-placeholder,
+      .cm-contact-form__detail::-ms-input-placeholder {
+        color: #fff;
+      }
+
+      .cm-contact-form__btn-box {
+        padding-top: 1rem;
+      }
+
+      .cm-contact-form__btn {
+        display: block;
+        padding: 0 3em;
+        font-size: .9em;
+        height: 3.2em;
+        border: none;
+        color: #fff;
+        background: transparent;
+        line-height: 3.1em;
+        border-radius: 0;
+        font-weight: 700;
+        box-shadow: 0 0 0 2px inset;
+        text-transform: uppercase;
+      }
+
+      .cm-contact-form__btn:hover {
+        color: #0d6efd;
+        background: #fff;
+        box-shadow: 0 0 0 3em #fff inset;
+        transition: all 300ms ease;
+      }
+
+      .safety__content {
+        width: 350px;
+        margin-left: 3.75rem; 
+      }
+
+      .safety__title {
+        font-size: 18px;
+        line-height: 1.25;
+        color: #191919;
+        font-weight: 600;
+        margin-top: 4.8rem;
+      }
+
+      .safety__description-box {
+        padding-top: 1.3rem;
+      }
+
+      .safety__description {
+        font-size: 18px;
+        line-height: 1.56;
+        color: #191919;
+      }
+
+      .multiple-slider {
+        position: relative;
+        height: 300px;
+        border: 1px solid red;
+      }
+
+      .multiple-slider > .slick-prev,
+      .multiple-slider > .slick-next {
+        height: 100%;
+        background: transparent;
+        color: #fff;
+        border: none;
+      }
+
+      .multiple-slider > .slick-list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      .multiple-slider > .slick-list > .slick-slide {
+        width: 370px;
+      }
+
+      .multiple-slider__data {
+        background: #ff4000;
+        color: #fff;
+        line-height: 100px;
+        margin: 10px;
+        padding: 2%;
+        text-align: center;
+      }      
+    </style>
+</head>
