@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const expHbs = require('express-handlebars');
-const pages = require('./controllers/pageSwitcherController.js');
+const pages = require('./controllers/pageRouterController.js');
 const port = process.env.PORT || 3000;
 
 const createHbs = expHbs.create({
