@@ -3,11 +3,22 @@
     <div class="wall__subtitle-box">
         <span class="wall__subtitle">Юрист-на-Дону</span>
     </div>
-    <div class="wall__description-box">
-        <span class="wall__description">
-            Оперативно помогаем компаниям и физ.лицам
-            в решении юридических вопросов
-        </span>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 is-unified">
+                <section class="wall__item wall__item--fill">
+                    <div class="wall__description-box">
+                        <span class="wall__description">
+                            Оперативно помогаем компаниям и физ.лицам
+                            в решении юридических вопросов
+                        </span>
+                    </div>
+                </section>
+            </div>
+            <div class="col-4">
+                <div class="wall__item"></div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="we">
@@ -89,24 +100,99 @@
         </div>
     </div>
 </section>
-<div class="in-touch">
-    <form class="contact-form">
-        <label class="form-label">
-            <span>Ваше имя</span>
-            <input type="text" class="form-control" placeholder="Имя" required>
-        </label>
-        <label class="form-label">
-            <span>E-mail</span>
-            <input type="email" class="form-control" placeholder="E-mail" required>
-        </label>
-        <label class="form-label">
-            <span>Номер телефона</span>
-            <input type="text" class="form-control" placeholder="Телефон" required>
-        </label>
-        <label class="form-label">
-            <span>Ваше сообщение</span>
-            <textarea class="form-control" rows="3"></textarea>
-        </label>
-        <input type="submit" class="btn" value="Отправить">
-    </form>
+<div class="container-fluid safety">
+    <div class="row">
+        <div class="col-7 is-unified">
+            <div class="in-touch">
+                <!-- <form class="contact-form">
+                    <h3 class="contact-form__title">Оставьте заявку</h3>
+                    <div class="contact-form__content-box">
+                        <label class="form-label contact-form__cm-input-box">
+                            <div class="contact-form__name-box">
+                                <span class="contact-form__input-name">Ваше имя</span>
+                            </div>
+                            <input type="text" class="form-control contact-form__input" placeholder="Имя" required>
+                        </label>
+                        <label class="form-label contact-form__cm-input-box">
+                            <div class="contact-form__name-box">
+                                <span class="contact-form__input-name">E-mail</span>
+                            </div>
+                            <input type="email" class="form-control contact-form__input" placeholder="E-mail" required>
+                        </label>
+                    </div>
+                    <div class="contact-form__field-box">
+                        <label class="form-label contact-form__cm-input-box">
+                            <div class="contact-form__name-box">
+                                <span class="contact-form__input-name">Номер телефона</span>
+                            </div>
+                            <input type="text" class="form-control contact-form__input" placeholder="Телефон" required>
+                        </label>
+                    </div>
+                    <div class="contact-form__field-box">
+                        <label class="form-label contact-form__cm-input-box is-full">
+                            <div class="contact-form__name-box">
+                                <span class="contact-form__input-name">Ваше сообщение</span>
+                            </div>
+                            <textarea class="form-control contact-form__detail is-full" rows="5"></textarea>
+                        </label>
+                    </div>
+                    <div class="contact-form__btn-box">
+                        <input type="submit" class="btn contact-form__cm-btn" value="Отправить">
+                    </div>
+                </form> -->
+                <form class="row g-2 cm-contact-form"> <!-- contact-form -->
+                    <h3 class="cm-contact-form__title">Оставьте заявку</h3>
+                    <div class="row g-2">
+                        <div class="col-6 cm-contact-form__item cm-equal">
+                            <label class="form-label cm-contact-form__input-box">
+                                <div class="cm-contact-form__name-box">
+                                    <span class="cm-contact-form__input-name">Ваше имя</span>
+                                </div>
+                                <input type="text" class="form-control cm-contact-form__input" placeholder="Имя" required>
+                            </label>
+                        </div>
+                        <div class="col-6 cm-contact-form__item cm-equal">
+                            <label class="form-label cm-contact-form__input-box">
+                                <div class="cm-contact-form__name-box">
+                                    <span class="cm-contact-form__input-name">E-mail</span>
+                                </div>
+                                <input type="text" class="form-control cm-contact-form__input" placeholder="E-mail" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row cm-contact-form__item">
+                        <label class="form-label cm-contact-form__input-box">
+                            <div class="cm-contact-form__name-box">
+                                <span class="cm-contact-form__input-name">Номер телефона</span>
+                            </div>
+                            <input type="text" class="form-control cm-contact-form__input" placeholder="Телефон" required>
+                        </label>
+                    </div>
+                    <div class="row cm-contact-form__item">
+                        <label class="form-label cm-contact-form__input-box">
+                            <div class="cm-contact-form__name-box">
+                                <span class="cm-contact-form__input-name">Ваше сообщение</span>
+                            </div>
+                            <textarea class="form-control cm-contact-form__detail" rows="5"></textarea>
+                        </label>
+                    </div>
+                    <div class="cm-contact-form__btn-box">
+                        <input type="submit" class="btn cm-contact-form__btn" value="Отправить">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-5 is-unified">
+            <div class="safety__content">
+                <h3 class="safety__title">В числе наших доверителей:</h3>
+                <div class="safety__description-box">
+                    <span class="safety__description">
+                        Уполномоченный по правам студентов в Ростовской Области
+                        <br>
+                        Исполком регионального отделения ОНФ по Ростовской Области
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
