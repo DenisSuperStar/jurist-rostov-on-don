@@ -1,4 +1,4 @@
-{{> head}}
+{{> headView}}
 <body class="page">
     <header class="index">
         <div class="index__port">
@@ -86,15 +86,41 @@
     <!-- init slider with slick -->
     <!-- <script src="../../slider/initSlider.js"></script> -->
     <script>
-        $('.single-slider').slick({
-            adaptiveHeight: true,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            arrows: false,
-            dots: true,
-            infinite: true,
-            mobileFirst: true,
-            pauseOnDotsHover: true
+        document.addEventListener('DOMContentLoaded', () => {
+            $('.single-slider').slick({
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2500,
+                arrows: false,
+                dots: true,
+                fade: true,
+                infinite: true,
+                mobileFirst: true,
+                pauseOnDotsHover: true,
+                cssEase: 'ease-in-out'
+            });
+        });
+        
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            $('.multiple-slider').slick({
+                /*adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true,
+                dots: true,
+                infinite: true,
+                slideToShow: 2,
+                slideToScroll: 2,
+                mobileFirst: true,
+                pauseOnDotsHover: true*/
+                /*autoplay: true,
+                autoplaySpeed: 4000,*/
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            });
         });
     </script>
 </body>
