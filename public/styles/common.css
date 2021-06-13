@@ -7,15 +7,12 @@
     padding-bottom: calc((3.75em * 2) - 1.5rem);
 }
 
+.contact {
+    margin-top: 3.75rem; 
+}
+
 @media screen and (min-width: 1401px) {
     .possibility {
         padding-left: 11px; 
     }
-}
-
-/*
-    ----!!!----
-*/
-.content__submiter {
-    margin-top: 3.75rem;
 }
