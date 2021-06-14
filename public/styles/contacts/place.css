@@ -8,7 +8,8 @@
     width: calc(100% + 133.8px);
     position: relative;
     background: #fff;
-    padding: 250px 35px 100px 0; 
+    padding-top: 250px;
+    padding-right: 35px; 
 }
 
 .contacts__pic {
@@ -32,7 +33,11 @@
 
 .contacts__title-box {
     text-align: right;
-    margin-bottom: 1.5rem;
+}
+
+.contacts__title-box--small {
+    text-align: center;
+    padding-left: 2.8rem;
 }
 
 .contacts__title {
@@ -49,7 +54,7 @@
 }
 
 .contacts__slogan-box {
-    margin-bottom: calc(1.5em * 3);
+    margin-bottom: calc(1.5em * 2.5);
 }
 
 .contacts__slogan {
@@ -72,6 +77,11 @@
 .contacts__info-box {
     width: 210px;
     padding-top: .2rem;
+    padding-bottom: .37rem;
+}
+
+.contacts__info-box#phone {
+    padding-bottom: calc(1.38rem + 0.37rem);
 }
 
 .contacts__info {
@@ -89,33 +99,30 @@
     font-size: 1.6em;
     color: #fff;
     background: #0d6efd;
-    margin-left: 2.5em;
+    margin-left: 5.5em;
 }
 
-.contacts__icon.is-phone::after {
+.contacts__icon#is-phone::after {
     content: '\f879';
     font-family: 'Font Awesome 5 Pro';
 }
 
-.contacts__icon.is-clock::after {
+.contacts__icon#is-clock::after {
     content: '\f34e';
     font-family: 'Font Awesome 5 Pro';
 }
 
-.contacts__icon.is-home::after {
+.contacts__icon#is-home::after {
     content: '\f015';
     font-family: 'Font Awesome 5 Pro';
 }
 
-.contacts__icon.is-envelope::after {
+.contacts__icon#is-envelope::after {
     content: '\f0e0';
     font-family: 'Font Awesome 5 Pro';
 }
 
-
-
-
-.cm-location__item {
+/*.cm-location__item {
     display: flex;
     justify-content: flex-end;
 }
@@ -123,4 +130,4 @@
 .cm-location__map {
     padding-left: 0;
     z-index: -1;
-}
+}*/
