@@ -11,6 +11,11 @@
     margin-top: 3.75rem; 
 }
 
+.overview {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
 @media screen and (min-width: 1401px) {
     .possibility {
         padding-left: 11px; 
