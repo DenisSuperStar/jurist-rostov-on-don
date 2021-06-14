@@ -62,6 +62,60 @@ module.exports.index = (req, res) => {
                 text: `Помощь в решении конфликтов супругов, 
                         родителей и детей`
             }  
+        ],
+
+        conditions: [
+            {   
+                itemId: 1,
+                title: 'Обращение в компанию',
+                text: 'Вы оставляете заявку на сайте или по телефону',
+                info: '+7 (951) 839 59 39',
+                src: '../../assets/table.jpg'
+            },
+            {   
+                itemId: 2,
+                title: 'Обратная связь',
+                text: 'Менеджер связывается с вами для обсуждения деталей',
+                src: '../../assets/calling.jpg'
+            },
+            {
+                itemId: 3,
+                title: 'Этап подписания договора',
+                text: `
+                        Согласование деталей и заключение договора
+                        на оказание услуг
+                `,
+                src: '../../assets/singing.jpg'
+            },
+            {
+                itemId: 4,
+                title: 'Решение вопроса',
+                text: 'Наши лучшие специалисты решают вашу проблему',
+                src: '../../assets/deal.jpg'
+            }
+        ],
+
+        address: [
+            {
+                title: 'Телефон',
+                info: '+7 (951) 839-59-39',
+                name: 'phone'
+            },
+            {
+                title: 'Адрес',
+                info: 'Ростов-на-Дону, ул.Максима Горького, 151',
+                name: 'clock'
+            },
+            {
+                title: 'Часы',
+                info: 'Пон-Вс: 10.00 – 20.00',
+                name: 'home'
+            },
+            {
+                title: 'Email',
+                info: 'sergeynazarov161@yandex.ru',
+                name: 'envelope'
+            }
         ]
     });
 }
