@@ -1,0 +1,126 @@
+.contacts__address {
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 8;
+}
+
+.contacts__index {
+    width: calc(100% + 133.8px);
+    position: relative;
+    background: #fff;
+    padding: 250px 35px 100px 0; 
+}
+
+.contacts__pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #0d6efd; 
+}
+
+.contacts__pic::after {
+    content: '\f66f';
+    font-family: 'Font Awesome 5 Pro';
+    font-size: 3.75em;
+    color: #fff; 
+}
+
+.contacts__title-box {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.contacts__title {
+    font-size: 1rem;
+    color: #0d6efd;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contacts__title--small {
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.contacts__slogan-box {
+    margin-bottom: calc(1.5em * 3);
+}
+
+.contacts__slogan {
+    color: #191919;
+    font-size: 2.1875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.contacts__field {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.contacts__item {
+    text-align: right;
+}
+
+.contacts__info-box {
+    width: 210px;
+    padding-top: .2rem;
+}
+
+.contacts__info {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.contacts__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    font-size: 1.6em;
+    color: #fff;
+    background: #0d6efd;
+    margin-left: 2.5em;
+}
+
+.contacts__icon.is-phone::after {
+    content: '\f879';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.contacts__icon.is-clock::after {
+    content: '\f34e';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.contacts__icon.is-home::after {
+    content: '\f015';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.contacts__icon.is-envelope::after {
+    content: '\f0e0';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+
+
+
+.cm-location__item {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cm-location__map {
+    padding-left: 0;
+    z-index: -1;
+}
