@@ -1,0 +1,44 @@
+<div class="container-fluid contacts">
+    <div class="row contacts__quest">
+        <div class="col-4 contacts__address">
+            <div class="contacts__index">
+                <div class="contacts__pic"></div>
+                <div class="contacts__title-box">
+                    <h2 class="contacts__title">05 ____ Контакты</h2>
+                </div>
+                <div class="contacts__slogan-box">
+                    <h3 class="contacts__slogan">
+                        Мы здесь ради вас <br>
+                        с 10.00 до 20.00, 7 дней в неделю
+                    </h3>
+                </div>
+                <div class="container contacts__field">
+                    <div class="row g-2">
+                        {{#each address}}
+                            <div class="col-6">
+                                <div class="contacts__item">
+                                    <div class="contacts__description">
+                                        <div class="contacts__title-box">
+                                            <span class="contacts__title contacts__title--small">
+                                                {{title}}
+                                            </span>
+                                        </div>
+                                        <div class="contacts__info-box">
+                                            <span class="contacts__info">
+                                                {{info}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__icon" id="is-{{name}}"></div>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 contacts__map">
+            {{> yandexMap}}
+        </div>
+    </div>
+</div>
