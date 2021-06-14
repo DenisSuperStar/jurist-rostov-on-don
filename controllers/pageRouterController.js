@@ -138,8 +138,8 @@ module.exports.contacts = (req, res) => {
     });
 }
 
-module.exports.contactUs = (req, res) => {
-    res.render('contactUs', {
-        title: 'Напишите нам'
+module.exports.notFound = (req, res) => {
+    res.render('404', {
+        title: 'Запрашиваемая страница не была найдена'
     });
 }
