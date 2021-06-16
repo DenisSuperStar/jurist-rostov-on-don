@@ -1,4 +1,4 @@
-<form class="row g-2 contact-form">
+<form class="row g-2 contact-form" id="contactForm">
     <h3 class="contact-form__title">Оставьте заявку</h3>
     <div class="row g-2">
         <div class="col-6 contact-form__item">
@@ -6,7 +6,7 @@
                 <div class="contact-form__name-box">
                     <span class="contact-form__input-name">Ваше имя</span>
                 </div>
-                <input type="text" class="form-control contact-form__input" placeholder="Имя" required>
+                <input type="text" class="form-control contact-form__input" placeholder="Имя" name="userName" required>
             </label>
         </div>
         <div class="col-6 contact-form__item">
@@ -14,7 +14,7 @@
                 <div class="contact-form__name-box">
                     <span class="contact-form__input-name">E-mail</span>
                 </div>
-                <input type="text" class="form-control contact-form__input" placeholder="E-mail" required>
+                <input type="text" class="form-control contact-form__input" placeholder="E-mail" name="userEmail" required>
             </label>
         </div>
     </div>
@@ -23,7 +23,7 @@
             <div class="contact-form__name-box">
                 <span class="contact-form__input-name">Номер телефона</span>
             </div>
-            <input type="text" class="form-control contact-form__input" placeholder="Телефон" required>
+            <input type="text" class="form-control contact-form__input" placeholder="Телефон" name="userPhone" required>
         </label>
     </div>
     <div class="row contact-form__item contact-form__item--full">
@@ -31,7 +31,7 @@
             <div class="contact-form__name-box">
                 <span class="contact-form__input-name">Ваше сообщение</span>
             </div>
-            <textarea class="form-control contact-form__detail" rows="5"></textarea>
+            <textarea class="form-control contact-form__detail" rows="5" name="userMessage"></textarea>
         </label>
     </div>
     <div class="contact-form__btn-box">
