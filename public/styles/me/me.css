@@ -1,0 +1,17 @@
+.me__title {
+    font-size: 27.2px;
+    font-weight: 600;
+    margin-top: calc(.5rem * 4);
+}
+
+.me__subtitle {
+    font-size: 20px;
+    margin-top: calc(.5rem * 2);
+    margin-bottom: 3.75rem;
+}
+
+.me__description-box {
+    width: 370px;
+    padding-bottom: 3.75rem;
+    font-size: 20px;
+}

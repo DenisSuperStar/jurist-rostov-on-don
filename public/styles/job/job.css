@@ -1,0 +1,36 @@
+.job {
+    margin-top: 1.875rem;
+}
+
+.job__img-box {
+    width: calc(50% + .75rem);
+    height: 350px;
+}
+
+.job__bg-img {
+    background-image: url('../../assets/meeting.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+.job__text {
+    width: calc(50% - .75rem);
+    padding-left: 3.75rem;
+    padding-right: 0;
+}
+
+.job__title {
+    padding-top: .5rem;
+    color: #191919;
+    font-size: 27.2px;
+    text-transform: uppercase;
+    margin-bottom: calc(.5rem * 4);
+}
+
+.job__description-box {
+    width: 370px;
+}
+
+.job__description {
+    font-size: 20px;
+}

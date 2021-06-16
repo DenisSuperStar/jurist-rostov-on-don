@@ -1,0 +1,37 @@
+.wall {
+    padding-top: 7.5rem;
+    padding-bottom: 1.875rem;
+}
+
+.wall__title {
+    font-size: 0.95rem;
+    margin-bottom: 3.5rem;
+    color: #191919;
+    padding-left: 150px;
+}
+
+.wall__subtitle-box {
+    margin-bottom: 1.5rem;
+    padding-left: 150px;
+}
+
+.wall__subtitle {
+    font-size: 35px;
+    color: #191919;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.wall__item--fill {
+    background: #0d6efd;
+    color: #fff;
+    padding: 120px 60px 3.75rem 150px;
+}
+
+.wall__description-box {
+    width: 461px;
+}
+
+.wall__description {
+    font-size: 35px;
+}

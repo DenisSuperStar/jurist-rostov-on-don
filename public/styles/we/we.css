@@ -1,0 +1,25 @@
+.we__item:first-child > .we__description-box {
+    margin-bottom: 120px;
+}
+
+.we__title {
+    font-size: 27.2px;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: calc(.5rem * 4);
+}
+
+.we__description-box {
+    width: 300px;
+}
+
+.we__description {
+    font-size: 16px;
+    color: #191919;
+}
+
+.we__bg-image {
+    background-image: url('../../assets/horizon.jpg');
+    background-size: cover;
+    height: 100%;
+}
