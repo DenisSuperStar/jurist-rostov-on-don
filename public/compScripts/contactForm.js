@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    $('contactForm').validate({
+    $('#contactForm').validate({
         rules: {
             userName: {
                 required: true
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             userMessage: {
                 required: true,
-                maxlength: 1024
+                maxlength: 3
             }
         },
         messages: {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             userMessage: {
                 required: 'Введите текст вашего сообщения',
-                maxlength: jQuery.format('Превышен лимит в 1024 символа!')
+                maxlength: 'Превышен допустимый лемит в {0} символа'
             }
         }
     });
