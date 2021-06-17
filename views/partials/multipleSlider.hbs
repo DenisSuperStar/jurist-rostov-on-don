@@ -1,16 +1,16 @@
 <h2 class="carousel-title">04 ____ Условия сотрудничества</h2>
 <div class="carousel-box">
     <div class="carousel-image">
-        {{#each conditions}}
-            <div class="carousel-image__item" id="carousel-item-{{itemId}}">
+        {{#each condition}}
+            <div class="carousel-image__item" id="carousel-item-{{slideId}}">
                 <div class="carousel-image__text-item">
                     <h3 class="carousel-image__bg-title">
-                        {{title}}
+                        {{bgTitle}}
                     </h3>
-                    <div class="carousel-image__bg-text">{{text}}</div>
-                    <div class="carousel-image__bg-info carousel-image__bg-info--warning">{{info}}</div>
+                    <div class="carousel-image__bg-text">{{bgText}}</div>
+                    <div class="carousel-image__bg-info carousel-image__bg-info--warning">{{tel}}</div>
                 </div>
-                <div class="carousel-image__bg-image" style="background-image: url('{{src}}');"></div>
+                <div class="carousel-image__bg-image" style="background-image: url('{{srcImgGall}}');"></div>
             </div>
         {{/each}}
     </div>

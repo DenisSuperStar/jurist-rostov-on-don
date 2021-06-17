@@ -71,79 +71,24 @@
         <div class="col-7 service__gallery">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6 service__gallery-item-box">
-                        <div class="service__gallery-item is-item-1">
-                            <div class="service__gallery-description">
-                                <div class="service__text-item">
-                                    <span class="service__bg-text">
-                                        На сайте или звоните по телефону
-                                    </span>
+                    {{#each about}}
+                        <div class="col-6 service__gallery-item-box">
+                            <div class="service__gallery-item" id="is-{{servId}}">
+                                <div class="service__gallery-description">
+                                    <div class="service__text-item">
+                                        <span class="service__bg-text">{{commonBgText}}</span>
+                                    </div>
+                                    <div class="service__text-item">
+                                        <span class="service__bg-info service__bg-info--warning">{{bgInfo}}</span>
+                                    </div>
+                                    <div class="service__text-item">
+                                        <span class="service__bg-title">{{bgTitle}}</span>
+                                    </div>
                                 </div>
-                                <div class="service__text-item">
-                                    <span class="service__bg-info service__bg-info--warning">
-                                        +7 (951) 839-59-39
-                                    </span>
-                                </div>
-                                <div class="service__text-item">
-                                    <span class="service__bg-title">
-                                        Вы оставляете заявку
-                                    </span>
-                                </div>
+                                <img src="{{srcImgItem}}" class="img-fluid service__img-gallery" alt="{{srcImgName}}">
                             </div>
-                            <img src="../assets/table.jpg" class="img-fluid service__img-gallery" alt="Заявка">
                         </div>
-                    </div>
-                    <div class="col-6 service__gallery-item-box">
-                        <div class="service__gallery-item is-item-2">
-                            <div class="service__gallery-description">
-                                <div class="service__text-item">
-                                    <span class="service__bg-text">
-                                        Менеджер связывается с вами
-                                    </span>
-                                </div>
-                                <div class="service__text-item">
-                                    <span class="service__bg-title">
-                                        Мы связываемся с вами
-                                    </span>
-                                </div>
-                            </div>
-                            <img src="../assets/calling.jpg" class="img-fluid service__img-gallery" alt="Звонок">
-                        </div>
-                    </div>
-                    <div class="col-6 service__gallery-item-box">
-                        <div class="service__gallery-item is-item-3">
-                            <div class="service__gallery-description">
-                                <div class="service__text-item">
-                                    <span class="service__bg-text">
-                                        Согласуем подписание договора
-                                    </span>
-                                </div>
-                                <div class="service__text-item">
-                                    <span class="service__bg-title">
-                                        Подписание договора
-                                    </span>
-                                </div>
-                            </div>
-                            <img src="../assets/singing.jpg" class="img-fluid service__img-gallery" alt="Договор">
-                        </div>
-                    </div>
-                    <div class="col-6 service__gallery-item-box">
-                        <div class="service__gallery-item is-item-4">
-                            <div class="service__gallery-description">
-                                <div class="service__text-item">
-                                    <span class="service__bg-text">
-                                        Решаем вашу проблему
-                                    </span>
-                                </div>
-                                <div class="service__text-item">
-                                    <span class="service__bg-title">
-                                        Решение вопроса
-                                    </span>
-                                </div>
-                            </div>
-                            <img src="../assets/deal.jpg" class="img-fluid service__img-gallery" alt="Решение">
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
