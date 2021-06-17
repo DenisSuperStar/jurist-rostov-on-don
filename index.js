@@ -40,12 +40,12 @@ app.get('/404', pages.notFound);
 
 // обработка запроса к несуществующей странице
 app.use((req, res) => {
-    res.status(404).sendFile(__dirname + '/public/404.html');
+    res.status(404).sendFile(path.resolve() + '/public/404.html');
 });
 
 // обработка серверных ошибок
 app.use((err, req, res) => {
     console.log(err.statusCode);
     console.log(err.statusMessage);
-    res.status(500).sendFile(__dirname + '/public/500.html');
+    res.status(500).sendFile(path.resolve() + '/public/500.html');
 });
