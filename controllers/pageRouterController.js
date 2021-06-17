@@ -14,6 +14,7 @@ const {
 module.exports.index = (req, res) => {
     res.render('indexView', {
         title: 'Оказание юридических услуг жителям Юрист-на-Дону, г.Ростова и Ростовской области',
+        isIndex: true,
         
         /*
             Передаем преобразованные массивы из home.js в представления
@@ -29,7 +30,8 @@ module.exports.index = (req, res) => {
 
 module.exports.about = (req, res) => {
     res.render('aboutView', {
-        title: 'О компании "Юрист-на-Дону", Ростова-на-Дону'
+        title: 'О компании "Юрист-на-Дону", Ростова-на-Дону',
+        isAbout: true
     });
 }
 
@@ -41,12 +43,14 @@ module.exports.services = (req, res) => {
 
 module.exports.contacts = (req, res) => {
     res.render('contactsView', {
-        title: 'Контакты - Юрист-на-Дону, г.Ростова-на-Дону'
+        title: 'Контакты - Юрист-на-Дону, г.Ростова-на-Дону',
+        isContact: true
     });
 }
 
 module.exports.notFound = (req, res) => {
     res.render('404', {
-        title: 'Запрашиваемая страница не была найдена'
+        title: 'Запрашиваемая страница не была найдена',
+        isNot: true
     });
 }
