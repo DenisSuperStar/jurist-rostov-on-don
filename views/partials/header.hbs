@@ -1,25 +1,29 @@
-<header class="header">
-    <div class="header__port">
-        <div class="header__logo">
-            <div class="header__block"></div>
-            <div class="header__slogan">Юрист-на-Дону</div>
-        </div>
-        <div class="header__nav-box">
-            <nav class="navbar navbar-expand-lg header__nav">
-                <div class="container-fluid header__menu-box">
-                    {{> humburger}}
-                    <div 
-                        class="collapse navbar-collapse header__dropdown"
-                        id="navbarSupportedContent"
-                    >
-                        {{> menu}}
+{{#if isHidden}}
+    <header></header>
+{{else}}
+    <header class="header">
+        <div class="header__port">
+            <div class="header__logo">
+                <div class="header__block"></div>
+                <div class="header__slogan">Юрист-на-Дону</div>
+            </div>
+            <div class="header__nav-box">
+                <nav class="navbar navbar-expand-lg header__nav">
+                    <div class="container-fluid header__menu-box">
+                        {{> humburger}}
+                        <div 
+                            class="collapse navbar-collapse header__dropdown"
+                            id="navbarSupportedContent"
+                        >
+                            {{> menu}}
+                        </div>
                     </div>
-                </div>
-            </nav> 
+                </nav> 
+            </div>
+            <div class="header__support">
+                <div class="header__call-btn"></div>
+                <div class="header__phone-number">+7 (951) 839-59-39</div>
+            </div>
         </div>
-        <div class="header__support">
-            <div class="header__call-btn"></div>
-            <div class="header__phone-number">+7 (951) 839-59-39</div>
-        </div>
-    </div>
-</header>
+    </header>
+{{/if}}

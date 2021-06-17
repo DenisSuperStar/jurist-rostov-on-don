@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Непредвиденная серверная ошибка</title>
+    <link rel="stylesheet" href="./styles/error.css">
 </head>
     <body>
-        <!-- Сверстать верхнее меню как в файле представления /404 -->
-        <h1>Упс! Что-то пошло не так...</h1>
-        <!-- Сверстать футер -->
+        <div class="error-handler">
+            <div class="alert alert-primary error">
+                <div class="error__code-box">
+                    <span class="error__code">500</span>
+                </div>
+                <div class="error__message-box">
+                    <span class="error__message">Упс! Что-то пошло не так...</span>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

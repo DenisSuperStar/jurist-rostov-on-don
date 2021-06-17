@@ -51,6 +51,6 @@ module.exports.contacts = (req, res) => {
 module.exports.notFound = (req, res) => {
     res.render('404', {
         title: 'Запрашиваемая страница не была найдена',
-        isNot: true
+        isHidden: true
     });
 }
