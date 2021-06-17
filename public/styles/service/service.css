@@ -79,21 +79,21 @@
     border: 1px solid;
 }
 
-.service__gallery-item.is-item-1 {
+.service__gallery-item#is-1 {
     border-right: 1px solid #fff;
     border-bottom: 2px solid #fff;
 }
 
-.service__gallery-item.is-item-2 {
+.service__gallery-item#is-2 {
     border-left: 1px solid #fff;
     border-bottom: 2px solid #fff;
 }
 
-.service__gallery-item.is-item-3 {
+.service__gallery-item#is-3 {
     border-right: 1px solid #fff;
 }
 
-.service__gallery-item.is-item-4 {
+.service__gallery-item#is-4 {
     border-left: 1px solid #fff;
 }
 
