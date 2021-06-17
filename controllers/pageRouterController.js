@@ -12,7 +12,7 @@ const {
 } = file.convertFileData();
 
 module.exports.index = (req, res) => {
-    res.render('index', {
+    res.render('indexView', {
         title: 'Оказание юридических услуг жителям Юрист-на-Дону, г.Ростова и Ростовской области',
         
         /*
@@ -28,19 +28,19 @@ module.exports.index = (req, res) => {
 }
 
 module.exports.about = (req, res) => {
-    res.render('about', {
+    res.render('aboutView', {
         title: 'О компании "Юрист-на-Дону", Ростова-на-Дону'
     });
 }
 
 module.exports.services = (req, res) => {
-    res.render('services', {
+    res.render('servicesView', {
         title: 'Прайс-лист'
     });
 }
 
 module.exports.contacts = (req, res) => {
-    res.render('contacts', {
+    res.render('contactsView', {
         title: 'Контакты - Юрист-на-Дону, г.Ростова-на-Дону'
     });
 }
