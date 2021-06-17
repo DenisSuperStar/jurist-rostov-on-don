@@ -1,0 +1,45 @@
+
+.header__phone-number {
+    background: #000;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 0 3em transparent inset;
+    transition: all 280ms ease;
+}
+
+.header__phone-number:hover,
+.header__call-btn:hover + .header__phone-number {
+    background: transparent;
+    color: #fff;
+    box-shadow: 0 0 0 1px #000 inset;
+}
+
+.contacts__icon {
+    background: #0d6efd;
+    color: #fff;
+    box-shadow: 0 0 0 3em transparent inset;
+    border: none;
+    transition: all 280ms ease;
+}
+
+.contacts__icon:hover {
+    background: #fff;
+    color: #0d6efd;
+    box-shadow: 0 0 0 1px #0d6efd inset;
+}
+
+.carousel-image > .slick-prev,
+.carousel-image > .slick-next {
+    background: #0d6efd;
+    color: transparent;
+    box-shadow: 0 0 0 3em transparent inset;
+    border: none;
+    transition: all 280ms ease;
+}
+
+.carousel-image > .slick-prev:hover,
+.carousel-image > .slick-next:hover {
+    background: transparent;
+    color: transparent;
+    box-shadow: 0 0 0 1px #0d6efd inset;
+}
