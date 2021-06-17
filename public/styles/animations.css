@@ -14,6 +14,81 @@
     box-shadow: 0 0 0 1px #000 inset;
 }
 
+.index__cm-navbar > .index__cm-item > .index__cm-link {
+    position: relative;
+    display: block;
+    color: #fff;
+    padding-left: 0;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.index__cm-navbar > .index__cm-item {
+    position: relative;
+}
+
+.index__cm-dropdown-menu {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 0;
+    border-bottom: 1px solid #0d6efd;
+}
+
+.index__cm-dropdown-menu {
+    opacity: 0;
+    transform-origin: top center;
+}
+
+.index__cm-item > .index__cm-dropdown-menu {
+    position: absolute;
+    width: 160px;
+}
+
+.index__cm-dropdown-menu .index__cm-link {
+    color: #0d6efd;
+    padding: 0;
+}
+
+.index__cm-item:hover > .index__cm-link + .index__cm-dropdown-menu {
+    animation: dropAnim .3s ease-in-out forwards;
+}
+
+.index__cm-item > .index__cm-link:hover {
+    color: #fff;
+}
+
+.index__cm-item.is-active > .index__cm-link,
+.index__cm-item.is-active > .index__cm-link:hover {
+    color: #0d6efd;
+}
+
+.index__cm-item.is-active > .index__cm-link::before {
+    background: #fff;
+}
+
+.index__cm-item > .index__cm-link:hover::before {
+    animation: crossOut .5s linear forwards;
+}
+
+.index__cm-link:hover + .index__cm-dropdown-menu  {
+    opacity: 1;
+}
+
+.index__cm-item > .index__cm-link::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #0d6efd;
+    transition: .5s;
+}
+
 .contacts__icon {
     background: #0d6efd;
     color: #fff;
@@ -42,4 +117,37 @@
     background: transparent;
     color: transparent;
     box-shadow: 0 0 0 1px #0d6efd inset;
+}
+
+@keyframes crossOut {
+    0% {
+        top: calc(50% - 2px);
+        left: -100%;
+        height: 2px;
+        z-index: 1;
+    }
+    50% {
+        top: calc(50% - 2px);
+        left: 0;
+        height: 2px;
+        z-index: 1;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+@keyframes dropAnim {
+    0% {
+        opacity: 0;
+        transform: translateX(30px) rotateY(90deg); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
 }
