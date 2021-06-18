@@ -1,4 +1,13 @@
+/*
+    Начинаем анимировать header
+*/
+.header {
+    transform: translateY(-100%);
+}
 
+/*
+    Анимирование кнопки звонка в header
+*/
 .header__phone-number {
     background: #000;
     color: #fff;
@@ -12,6 +21,38 @@
     background: transparent;
     color: #fff;
     box-shadow: 0 0 0 1px #000 inset;
+}
+
+/*
+    Продолжение анимации header
+*/
+
+.header.out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #fff;
+    /*
+        Плавно возвращаем header на место
+    */
+    transform: translateY(0);
+    transition: all .3s ease;
+}
+
+/*
+    Изменения базовых стилей самого хедера при его появлении
+*/
+
+.header.out > .header__port {
+    padding: 0;
+}
+
+.header.out .header__slogan,
+.header.out .header__phone-number:hover,
+.header.out .header__call-btn:hover + .header__phone-number {
+    color: #000;
 }
 
 .index__cm-navbar > .index__cm-item > .index__cm-link {
@@ -87,6 +128,18 @@
     height: 2px;
     background: #0d6efd;
     transition: .5s;
+}
+
+/*
+    Изменения базовых стилей меню при появлении хедера
+*/
+
+.index.scroll .index__cm-item.is-active > .index__cm-link::before {
+    background: #000;
+}
+
+.index.scroll .index__cm-item:not(.is-active) > .index__cm-link {
+    color: #000;
 }
 
 .contacts__icon {
