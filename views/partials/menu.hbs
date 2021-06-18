@@ -1,79 +1,81 @@
-<ul class="navbar-nav index__cm-navbar">
-    {{#if isIndex}}
-        <li class="nav-item index__cm-item is-active">
-            <a 
-                class="nav-link index__cm-link"
-                href="/"
-            >
-                Главная 
-            </a>
-        </li>
-    {{else}}
-        <li class="nav-item index__cm-item">
-            <a 
-                class="nav-link index__cm-link"
-                href="/"
-            >
-                Главная
-            </a>
-        </li>
-    {{/if}}
-    {{#if isAbout}}
-        <li class="nav-item index__cm-item is-active">
-            <a
-                class="nav-link index__cm-link"
-                href="/about"
-            >
-                О проекте
-            </a>
-            <ul class="index__cm-dropdown-menu">
-                <li class="index__cm-dropdown-item">
-                    <a 
-                        class="nav-link index__cm-link"
-                        href="/services"
-                    >
-                        Услуги компании
-                    </a>
-                </li>
-            </ul>
-        </li>
-    {{else}}
-        <li class="nav-item index__cm-item">
-            <a 
-                class="nav-link index__cm-link"
-                href="/about"
-            >
-                О проекте
-            </a>
-            <ul class="index__cm-dropdown-menu">
-                <li class="index__cm-dropdown-item">
-                    <a 
-                        class="nav-link index__cm-link"
-                        href="/services"
-                    >   
-                        Услуги компании
-                    </a>
-                </li>
-            </ul>
-        </li>
-    {{/if}}
-    {{#if isContact}}
-        <li class="nav-item index__cm-item is-active">
-            <a
-                class="nav-link index__cm-link"
-                href="/contacts" 
-            >
-                Контакты
-            </a>
-        </li>
-    {{else}}
-        <li class="nav-item index__cm-item">
-            <a
-                class="nav-link index__cm-link"
-                href="/contacts"
-            >
-                Контакты
-            </a>
-        </li>
-    {{/if}}
-</ul>
+<div class="index">
+    <ul class="navbar-nav index__cm-navbar">
+        {{#if isIndex}}
+            <li class="nav-item index__cm-item is-active">
+                <a 
+                    class="nav-link index__cm-link"
+                    href="/"
+                >
+                    Главная 
+                </a>
+            </li>
+        {{else}}
+            <li class="nav-item index__cm-item">
+                <a 
+                    class="nav-link index__cm-link"
+                    href="/"
+                >
+                    Главная
+                </a>
+            </li>
+        {{/if}}
+        {{#if isAbout}}
+            <li class="nav-item index__cm-item is-active">
+                <a
+                    class="nav-link index__cm-link"
+                    href="/about"
+                >
+                    О проекте
+                </a>
+                <ul class="index__cm-dropdown-menu">
+                    <li class="index__cm-dropdown-item">
+                        <a 
+                            class="nav-link index__cm-link"
+                            href="/services"
+                        >
+                            Услуги компании
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        {{else}}
+            <li class="nav-item index__cm-item">
+                <a 
+                    class="nav-link index__cm-link"
+                    href="/about"
+                >
+                    О проекте
+                </a>
+                <ul class="index__cm-dropdown-menu">
+                    <li class="index__cm-dropdown-item">
+                        <a 
+                            class="nav-link index__cm-link"
+                            href="/services"
+                        >   
+                            Услуги компании
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        {{/if}}
+        {{#if isContact}}
+            <li class="nav-item index__cm-item is-active">
+                <a
+                    class="nav-link index__cm-link"
+                    href="/contacts" 
+                >
+                    Контакты
+                </a>
+            </li>
+        {{else}}
+            <li class="nav-item index__cm-item">
+                <a
+                    class="nav-link index__cm-link"
+                    href="/contacts"
+                >
+                    Контакты
+                </a>
+            </li>
+        {{/if}}
+    </ul>
+</div>
