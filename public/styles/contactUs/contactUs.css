@@ -54,12 +54,25 @@
     padding-left: 3.75rem;
 }
 
+.contact__input-box {
+    margin-right: .3rem;
+}
+
 .contact__input {
     width: 296px;
     height: 54.4px;
     border-radius: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
     border: none;
+}
+
+.contact__input:focus {
+    border-radius: 0;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    border: none;
+    box-shadow: none;
 }
 
 .contact__input::placeholder,
