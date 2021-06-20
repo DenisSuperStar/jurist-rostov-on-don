@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             userMessage: {
                 required: true,
-                maxlength: 3
+                maxlength: 1024
             }
         },
         messages: {
