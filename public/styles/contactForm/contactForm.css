@@ -45,6 +45,7 @@
     height: 54px;
     border: none;
     background: rgba(255, 255, 255, .1);
+    color: #fff;
 }
 
 .contact-form__detail {
@@ -52,11 +53,13 @@
     width: 100%;
     border: none;
     background: rgba(255, 255, 255, .1);
+    color: #fff;
 }
 
 .contact-form__input:focus,
 .contact-form__detail:focus {
     background: rgba(255, 255, 255, .1);
+    color: #fff;
 }
 
 .contact-form__input::placeholder,
