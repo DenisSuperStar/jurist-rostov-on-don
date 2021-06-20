@@ -1,3 +1,6 @@
+// подключаем модуль для отправки формы
+const nodemailer = require('nodemailer');
+
 module.exports.feedBack = (req, res) => {
     // вывод тела запрос в консоль для проверки
     console.log(req.body);
@@ -26,6 +29,9 @@ module.exports.feedBack = (req, res) => {
             auth: {
                 user: gmailEmail,
                 pass: gmailPass
+            },
+            tls: {
+                rejectUnauthorized: false
             }
         });
 
@@ -37,6 +43,8 @@ module.exports.feedBack = (req, res) => {
             text: `У вас новый вопрос от ${name}: ${message}. Телефон для связи: ${phone}`,
             html: `У вас <strong>новый вопрос</strong> от <strong>${name}</strong>: <i>${message}</i>. 
                     Телефон для связи: <strong>${phone}</strong>.`
+        }, (err) => {
+            if (err) console.log(err);
         });
 
         // вывод отправленного сообщения в консоль

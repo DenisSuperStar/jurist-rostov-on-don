@@ -1,3 +1,6 @@
+// подключаем модуль для отправки формы
+const nodemailer = require('nodemailer');
+
 module.exports.contactUs = (req, res) => {
     // выводим тело запроса в консоль
     console.log(req.body);
