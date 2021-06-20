@@ -1,0 +1,24 @@
+.contact__input.error {
+    width: 296px;
+    height: 54.4px;
+    border-radius: 0;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    border: none;
+}
+
+.contact__input:focus.error {
+    border-radius: 0;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.contact__input.error + .error {
+    display: block;
+    color: #ff2800;
+    font-size: 12px;
+    padding-top: .3rem;
+    padding-left: .7rem;
+}
