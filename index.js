@@ -1,9 +1,16 @@
-const createError = require('http-errors');
+/* const createError = require('http-errors'); */
 const express = require('express');
 const app = express();
 const path = require('path');
 const expHbs = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
+const contact = requier('./controllers/contactUsController.js');
+const feedback = require('./controllers/feedBackController.js');
+// создаем парсер для данных в формате json
+const jsonParser = express.json();
+// подключаем модуль для отправки формы
+const nodemailer = require('nodemailer');
+const tls = require('tls');
 const port = process.env.PORT || 3000;
 
 const createHbs = expHbs.create({
@@ -26,8 +33,13 @@ app.use(express.static(path.resolve() + '/public'));
 // обработка запроса по корневому адресу /
 app.get('/', pages.index);
 
+// обработка запроса отправки формы по корневому адресу /
+app.post('/', jsonParser, contact.contactUs);
+
 // обработка запроса по адресу /about
-app.use('/about', pages.about);
+app.get('/about', pages.about);
+
+app.post('/about', jsonParser, feedback.feedBack);
 
 // обработка запроса по адресу /services
 app.get('/services', pages.services);
