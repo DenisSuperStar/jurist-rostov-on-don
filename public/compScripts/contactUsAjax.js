@@ -1,6 +1,4 @@
-$('.is-send').on('click', (e) => {
-    // сбрасываем функционал формы по умолчанию
-    e.preventDefault();
+$('.is-send').on('click', () => {
     // получаем данные формы
     const sendUsForm = document.forms['sendUsForm'];
     const name = sendUsForm.elements['name'].value;
@@ -41,3 +39,8 @@ $('.is-send').on('click', (e) => {
     });
     ajax.send(user);
 });
+
+// PS: не отменяем поведение формы по умолчанию,
+// не сработает обработка полей формы на фронте
+// e.preventDefault() - отмена действий браузера
+// по умолчанию

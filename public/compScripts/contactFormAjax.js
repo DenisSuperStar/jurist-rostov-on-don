@@ -1,5 +1,5 @@
 $('#is-send').on('click', e => {
-    e.preventDefault();
+    /*e.preventDefault();*/
 
     const sendForm = document.forms['sendForm'];
     const userName = sendForm.elements['userName'].value;
@@ -37,5 +37,5 @@ $('#is-send').on('click', e => {
             back.userMessage
         );
     });
-    ajax.send(user);
+    ajax.send(feedback);
 });
