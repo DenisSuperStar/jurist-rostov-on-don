@@ -4,13 +4,10 @@ const app = express();
 const path = require('path');
 const expHbs = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
-const contact = requier('./controllers/contactUsController.js');
+const contact = require('./controllers/contactUsController.js');
 const feedback = require('./controllers/feedBackController.js');
 // создаем парсер для данных в формате json
 const jsonParser = express.json();
-// подключаем модуль для отправки формы
-const nodemailer = require('nodemailer');
-const tls = require('tls');
 const port = process.env.PORT || 3000;
 
 const createHbs = expHbs.create({
