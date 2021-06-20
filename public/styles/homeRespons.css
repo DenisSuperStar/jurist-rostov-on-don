@@ -1,0 +1,47 @@
+/*
+    В этом css файле описаны стили
+    для адаптации главной страницы
+    под устройства с расширениями
+    типа Large devices (Bootstrap 5 docs)
+*/
+
+/*
+    Адаптивность для блока отображения услуг для Large devices
+*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .service__visible-description {
+        padding-left: .75em;
+        padding-right: .3rem;
+    }
+
+    .service__gallery {
+        width: 58.3333333333%;
+        padding-left: 1.2rem;
+    }
+
+    .service__gallery > div {
+        padding: 0;
+    }
+
+    .service__bg-text {
+        width: calc(80% + 5px);
+        font-size: 19px;
+        padding-left: .2rem;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .service__bg-info {
+        width: 80%;
+        font-size: 24px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .service__bg-title {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 1.5rem;
+        padding-top: 0;
+    }
+}
