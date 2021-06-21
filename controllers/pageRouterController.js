@@ -35,8 +35,8 @@ module.exports.about = (req, res) => {
     });
 }
 
-module.exports.services = (req, res) => {
-    res.render('servicesView', {
+module.exports.price = (req, res) => {
+    res.render('priceView', {
         title: 'Прайс-лист'
     });
 }

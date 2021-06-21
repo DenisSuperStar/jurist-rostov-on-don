@@ -38,8 +38,8 @@ app.get('/about', pages.about);
 
 app.post('/about', jsonParser, feedback.feedBack);
 
-// обработка запроса по адресу /services
-app.get('/services', pages.services);
+// обработка запроса по адресу /price
+app.get('/price', pages.price);
 
 // обработка запроса по адресу /contacts
 app.get('/contacts', pages.contacts);
