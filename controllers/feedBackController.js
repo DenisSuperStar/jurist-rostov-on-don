@@ -1,5 +1,6 @@
 // подключаем модуль для отправки формы
 const nodemailer = require('nodemailer');
+const credit = require('../credit/credit.js');
 
 module.exports.feedBack = (req, res) => {
     // вывод тела запрос в консоль для проверки
@@ -13,9 +14,9 @@ module.exports.feedBack = (req, res) => {
     const personName = req.body.userName;
     const personMessage = req.body.userMessage;
     const personPhone = req.body.userPhone;
-    const gmailUserEmail = 'ignatalex4991@gmail.com';
-    const gmailUserPassword = 'itProger1994';
-    const host = 'pop.gmail.com';
+    const gmailUserEmail = credit.userEmail;
+    const gmailUserPassword = credit.userPass;
+    const host = credit.post;
     const port = 995;
     const secure = true;
 
