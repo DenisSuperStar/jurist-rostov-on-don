@@ -5,6 +5,227 @@
     типа Large devices (Bootstrap 5 docs)
 */
 
+@media screen and (max-width: 575px) {
+    .contacts__info { /*Для этого css правила будет 2 медиа-запроса*/
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+.contact {
+    margin-top: 0;
+}
+
+.state {
+    padding-top: 0;
+    padding-bottom: 7.5rem;
+}
+
+.header__nav-box {
+display: none;
+}
+
+.slider-text__item {padding: 0;}
+.slider-text__block {display: none;}
+.slider-text__description {
+margin: 0;
+}
+.slider-text__title {
+width: 300px;
+font-size: 20px;
+}
+.slider-text__subtitle {
+width: 300px;
+font-size: 25px;
+}
+.slick-dots {
+position: absolute;
+top: 50%;
+margin: 0;
+padding: 0 10px;
+}
+
+.header__support {
+display: none;
+}
+
+.direction:first-child .direction__equally {
+    padding: 0 0 7.5rem 0;
+}
+
+.direction:last-child .direction__equally {
+    padding: 0;
+}
+
+.direction__container {display: none;}
+
+
+.direction__equally {
+width: 100%;
+margin: 0;
+}
+
+.direction__info {
+margin: 0;
+}
+
+.direction__title {
+font-size: .75rem;
+text-align: center;
+}
+
+.direction__description-box {
+    text-align: center;
+}
+
+.direction__description {
+font-size: 19px;
+}
+
+.direction__icon {
+    position: static;
+    margin-bottom: 7.5rem;
+}
+
+.direction__btn-box {
+    display: flex;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+.slider-text__title {
+width: 100%;
+font-size: 20px;
+padding-left: 2.5em;
+}
+
+.slider-text__subtitle {
+width: 100%;
+font-size: 20px;
+padding-left: 2.3em;
+}
+
+.slick-dots {
+position: absolute;
+top: 50%;
+padding: 0 10px;
+margin: 0 50px;
+}
+
+.btn-scroll {
+position: fixed;
+top: 50%;
+left: 0;
+right: auto;
+margin-top: 100px;
+margin-left: 57.5px;
+}
+
+.direction__container {
+display: none;
+}
+
+.state div.col-4 {
+width: 100%;
+} 
+
+.self-card {
+width: 100%;
+}
+
+.self-card__text {
+font-size: 25px;
+}
+
+.contact__image-box {
+display: none;
+}
+
+.contact__bs-box {
+width: 100%;
+}
+
+.service__gallery {
+display: none;
+}
+
+.service__visible-description {
+padding: 0;
+width: 100%;
+}
+
+.contacts__map {width: 100%;}
+
+.service__text {
+font-size: 30.8px;
+}
+
+.contacts__title-box {
+text-align: left;
+padding-left: 30px;
+}
+
+.contacts__title-box--small {
+    width: 100%;
+    text-align: center;
+    }
+
+.contacts__title--small {
+    font-size: 15.8px;
+}
+
+.contacts__slogan {
+max-width: 412px;
+text-align: left;
+margin-top: 1.5rem;
+font-size: 30.8px;
+padding-left: 30px;
+}
+
+.contacts__field .col-6 {
+max-width: 414px;
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+.contacts__info-box {
+width: 100%;
+text-align: center;
+padding: 0;
+margin-bottom: .5rem;
+}
+
+.contacts__info {
+    font-size: 17px;
+}
+
+.contacts__info-box#phone {
+    padding: 0;
+}
+
+.contacts__index {
+    width: 100%;
+    padding: 0;
+}
+
+.contacts__pic {
+    position: static;
+    margin-bottom: 7.5rem;
+}
+
+.contacts__address {
+    width: 100%;
+}
+
+.contacts__icon {
+    padding: 0 3em;
+    margin: 0 auto .8rem;
+}
+}
+
+
 /*
     Адаптивность для блока отображения услуг для Large devices
 */
