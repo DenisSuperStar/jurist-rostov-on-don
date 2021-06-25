@@ -20,10 +20,13 @@ window.addEventListener('scroll', function() {
     else if ($(this).scrollTop() < (docHeight - 1211)) $('#toBottom').show(500);
 });
 
-$('#toTop').click(() => {
+
+// Анимация прокрутки вверх
+$('#toTop').on('click', () => {
     $('html, body').animate({scrollTop: 0}, 800);
 });
 
-$('#toBottom').click(() => {
+// Анимация прокрутки вверх
+$('#toBottom').on('click', () => {
     $('html, body').animate({scrollTop: (docHeight - 1211)}, 800);
 });
