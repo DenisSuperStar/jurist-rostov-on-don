@@ -1,13 +1,18 @@
-/* const createError = require('http-errors'); */
+const http = require('http');
 const express = require('express');
 const app = express();
 const path = require('path');
 const expHbs = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
 const contact = require('./controllers/contactUsController.js');
-const feedback = require('./controllers/feedBackController.js');
-// создаем парсер для данных в формате json
-const jsonParser = express.json();
+const process = require('./controllers/processUserController.js');
+const server = http.createServer(app);
+// создаем парсер для данных с помощью модуля body parser
+const bodyParser = require('body-parser');
+const urlEncodedParser = bodyParser.urlencoded({
+    extended: false
+});
+const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 
 const createHbs = expHbs.create({
@@ -15,8 +20,15 @@ const createHbs = expHbs.create({
     extname: 'hbs'
 });
 
-app.listen(port, () => {
-    console.log(`Сервер запущен на порту ${port}`);
+const dbHost = '27017';
+const dbName = 'newClientDb';
+
+mongoose.connect(`mongodb://localhost:${dbHost}/${dbName}`, {useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
+    if (err) throw err;
+    
+    server.listen(port, () => {
+        console.log(`Сервер запущен на порту ${port}`);
+    });
 });
 
 app.engine('hbs', createHbs.engine);
@@ -28,21 +40,24 @@ app.set('views', './views');
 app.use(express.static(path.resolve() + '/public'));
 
 // обработка запроса по корневому адресу /
-app.get('/', pages.index);
+app.get('/', urlEncodedParser, pages.index);
 
 // обработка запроса отправки формы по корневому адресу /
-app.post('/', jsonParser, contact.contactUs);
+app.post('/', urlEncodedParser, contact.contactUs);
 
 // обработка запроса по адресу /about
 app.get('/about', pages.about);
 
-app.post('/about', jsonParser, feedback.feedBack);
+app.post('/about', urlEncodedParser, process.addUserComment);
 
 // обработка запроса по адресу /price
 app.get('/price', pages.price);
 
 // обработка запроса по адресу /contacts
 app.get('/contacts', pages.contacts);
+
+// обработка запроса по адресу /dashboard
+app.get('/dashboard', process.showUserComment);
 
 // обработка запроса по адресу /404
 app.get('/404', pages.notFound);
