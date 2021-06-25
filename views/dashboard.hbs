@@ -1,0 +1,18 @@
+<h1>Список пользователей</h1>
+
+<table>
+    <tr>
+        <th>Имя</th>
+        <th>E-mail</th>
+        <th>Номер телефона</th>
+        <th>Сообщение пользователя</th>
+    </tr>
+    {{#each users}}
+        <tr>
+            <td>{{this.userName}}</td>
+            <td>{{this.userEmail}}</td>
+            <td>{{this.userPhone}}</td>
+            <td>{{this.userMessage}}</td>
+        </tr>
+    {{/each}}
+</table>
