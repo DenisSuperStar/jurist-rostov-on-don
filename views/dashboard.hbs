@@ -1,18 +1,18 @@
-<h1>Список пользователей</h1>
-
-<table>
-    <tr>
-        <th>Имя</th>
-        <th>E-mail</th>
-        <th>Номер телефона</th>
-        <th>Сообщение пользователя</th>
-    </tr>
-    {{#each users}}
-        <tr>
-            <td>{{this.userName}}</td>
-            <td>{{this.userEmail}}</td>
-            <td>{{this.userPhone}}</td>
-            <td>{{this.userMessage}}</td>
-        </tr>
-    {{/each}}
-</table>
+<div class="container page__dashboard">
+    <div class="row dashboard-box">
+        <div class="col-12 dashboard">
+            <div class="alert dashboard__title-box">
+                <h1 class="alert-heading dashboard__title">Заявки пользователей</h1>
+            </div>
+            {{#each users}}
+                <div class="alert dashboard__user-info">
+                    <h4 class="alert-heading dashboard__user-name">Имя клиента: {{this.userName}}</h4>
+                    <p class="dashboard__user-message">Текст сообщения: {{this.userMessage}}</p>
+                    <hr>
+                    <p class="dashboard__user-email">Адрес эл.почты: {{this.userEmail}}</p>
+                    <p class="dashboard__user-phone">{{this.userName}} оставил номер телфона: {{this.userPhone}}</p>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
