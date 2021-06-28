@@ -14,25 +14,31 @@
                 </div>
                 <div class="container contacts__field">
                     <div class="row g-2">
-                        {{#each address}}
-                            <div class="col-6">
-                                <div class="contacts__item">
-                                    <div class="contacts__description">
-                                        <div class="contacts__title-box contacts__title-box--small">
-                                            <span class="contacts__title contacts__title--small">
-                                                {{title}}
-                                            </span>
+                        {{#if address}}
+                            {{#each address}}
+                                <div class="col-6">
+                                    <div class="contacts__item">
+                                        <div class="contacts__description">
+                                            <div class="contacts__title-box contacts__title-box--small">
+                                                <span class="contacts__title contacts__title--small">
+                                                    {{title}}
+                                                </span>
+                                            </div>
+                                            <div class="contacts__info-box" id="{{sectionName}}">
+                                                <span class="contacts__info">
+                                                    {{info}}
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div class="contacts__info-box" id="{{sectionName}}">
-                                            <span class="contacts__info">
-                                                {{info}}
-                                            </span>
-                                        </div>
+                                        <div class="contacts__icon" id="is-{{sectionName}}"></div>
                                     </div>
-                                    <div class="contacts__icon" id="is-{{sectionName}}"></div>
                                 </div>
+                            {{/each}}
+                        {{else}}
+                            <div class="alert price__text">
+                                <p class="alert-heading price__header">Ваш адрес не указан</p>
                             </div>
-                        {{/each}}
+                        {{/if}}
                     </div>
                 </div>
             </div>

@@ -71,24 +71,30 @@
         <div class="col-7 service__gallery">
             <div class="container-fluid">
                 <div class="row">
-                    {{#each about}}
-                        <div class="col-6 service__gallery-item-box">
-                            <div class="service__gallery-item" id="is-{{servId}}">
-                                <div class="service__gallery-description">
-                                    <div class="service__text-item">
-                                        <span class="service__bg-text">{{commonBgText}}</span>
+                    {{#if about}}
+                        {{#each about}}
+                            <div class="col-6 service__gallery-item-box">
+                                <div class="service__gallery-item" id="is-{{servId}}">
+                                    <div class="service__gallery-description">
+                                        <div class="service__text-item">
+                                            <span class="service__bg-text">{{commonBgText}}</span>
+                                        </div>
+                                        <div class="service__text-item">
+                                            <span class="service__bg-info service__bg-info--warning">{{bgInfo}}</span>
+                                        </div>
+                                        <div class="service__text-item">
+                                            <span class="service__bg-title">{{bgTitle}}</span>
+                                        </div>
                                     </div>
-                                    <div class="service__text-item">
-                                        <span class="service__bg-info service__bg-info--warning">{{bgInfo}}</span>
-                                    </div>
-                                    <div class="service__text-item">
-                                        <span class="service__bg-title">{{bgTitle}}</span>
-                                    </div>
+                                    <img src="{{srcImgItem}}" class="img-fluid service__img-gallery" alt="{{srcImgName}}">
                                 </div>
-                                <img src="{{srcImgItem}}" class="img-fluid service__img-gallery" alt="{{srcImgName}}">
                             </div>
+                        {{/each}}
+                    {{else}}
+                        <div class="alert price__text">
+                            <p class="price-heading price__header">У вас не заполнена информация о проекте или компании</p>
                         </div>
-                    {{/each}}
+                    {{/if}}
                 </div>
             </div>
         </div>

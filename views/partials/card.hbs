@@ -1,19 +1,25 @@
 <div class="container">
     <div class="row">
-        {{#each gallery}}
-            <div class="col-4">
-                <div class="box">
-                    <div class="card self-card">
-                        <img src="{{srcThemeImage}}" class="img-fluid self-card__img" alt="{{imgName}}">
-                        <div class="card-body self-card__body">
-                            <h5 class="card-title self-card__title">{{cardTitle}}</h5>
-                            <p class="card-text self-card__text">
-                                {{cardText}}
-                            </p>
+        {{#if gallery}}
+            {{#each gallery}}
+                <div class="col-4">
+                    <div class="box">
+                        <div class="card self-card">
+                            <img src="{{srcThemeImage}}" class="img-fluid self-card__img" alt="{{imgName}}">
+                            <div class="card-body self-card__body">
+                                <h5 class="card-title self-card__title">{{cardTitle}}</h5>
+                                <p class="card-text self-card__text">
+                                    {{cardText}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            {{/each}}
+        {{else}}
+            <div class="alert price__text">
+                <p class="alert-heading price__header">У вас пока что не добавлено ни одного навыка</p>
             </div>
-        {{/each}}
+        {{/if}}
     </div>
 </div>

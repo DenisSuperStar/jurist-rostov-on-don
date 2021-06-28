@@ -1,25 +1,31 @@
-{{#each direction}}
-    <div class="container-fluid direction">
-        <div class="row">
-            <div class="col-6 direction__equally">
-                <div class="direction__icon" id="is-{{sectionId}}"></div>
-                <div class="direction__info">
-                        <h2 class="direction__title" id="title-{{id}}">{{sectionHeader}}</h2>
-                    <div class="direction__description-box">
-                        <span class="direction__description">{{subject}}</span>
-                    </div>
-                    <div class="direction__btn-box">
-                        <a href="#" class="direction__btn" title="{{btnText}}">
-                            <span class="direction__btn-info">{{btnText}}</span>
-                        </a>
+{{#if direction}}
+    {{#each direction}}
+        <div class="container-fluid direction">
+            <div class="row">
+                <div class="col-6 direction__equally">
+                    <div class="direction__icon" id="is-{{sectionId}}"></div>
+                    <div class="direction__info">
+                            <h2 class="direction__title" id="title-{{id}}">{{sectionHeader}}</h2>
+                        <div class="direction__description-box">
+                            <span class="direction__description">{{subject}}</span>
+                        </div>
+                        <div class="direction__btn-box">
+                            <a href="#" class="direction__btn" title="{{btnText}}">
+                                <span class="direction__btn-info">{{btnText}}</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 direction__container">
-                <div class="direction__image-box">
-                    <div class="direction__bg-image" style="background-image: url('{{urlBanner}}')"></div>
+                <div class="col-6 direction__container">
+                    <div class="direction__image-box">
+                        <div class="direction__bg-image" style="background-image: url('{{urlBanner}}')"></div>
+                    </div>
                 </div>
             </div>
         </div>
+    {{/each}}
+{{else}}
+    <div class="alert price__text">
+        <p class="alert-heading price__header">Заполните раздел специализации!</p>
     </div>
-{{/each}}
+{{/if}}
