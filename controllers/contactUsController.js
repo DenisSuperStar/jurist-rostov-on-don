@@ -1,4 +1,4 @@
-// испорт функции отправки сообщения на почту
+// импорт функции отправки сообщения на почту
 const sendMail = require('../mail.js');
 const credit = require('../credit/credit.js');
 

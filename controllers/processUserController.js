@@ -1,46 +1,29 @@
-const user = require('../models/user.js');
-const { v4: uuidv4 } = require('uuid');
+const User = require('../models/user.js');
 
-module.exports.addUserComment = (req, res) => {
-    const body = JSON.parse(JSON.stringify(req.body));
-    if (!body.userName || !body.userEmail || !body.userPhone || !body.userMessage) res.sendStatus(400);
-
-    const userName = body.userName;
-    const userEmail = body.userEmail;
-    const userPhone = body.userPhone;
-    const message = body.userMessage;
-
-    const user = new User({
-        id: uuidv4(),
-        userName,
-        userEmail,
-        userPhone,
-        userMessage: message
+module.exports.addPerson = (req, res) => {
+    res.render('aboutView', {
+        title: 'О компании "Юрист-на-Дону", Ростова-на-Дону',
+        isAbout: true
     });
-
-    user.save((err) => {
-        if (err) throw err;
-    });
-
-    const template = `
-        <div style="display: flex; flex-direction: column; font-size: 25px;">
-            <span>
-                Мы <strong>рассмотрим</strong> вашу заявку и <strong>перезвоним</strong>!
-            </span>
-            <br>
-            <a href="/about" style="text-decoration: none; cursor: pointer;">На страницу "О нас"</a>
-        </div>
-    `;
-
-    res.send(`${template}`);
 }
 
-module.exports.showUserComment = (req, res) => {
-    user.find({}, (err, all) => {
-        if (err) throw err;
-        res.render('dashboard.hbs', {
-            users: all,
-            title: 'Список пользователей'
-        });
+module.exports.createPerson = (req, res) => {
+    const uName = req.body.userName;
+    const uEmail = req.body.userEmail;
+    const uPhone = req.body.userPhone;
+    const uMessage = req.body.userMessage;
+
+    if (!uName || !uEmail || !uPhone || !uMessage) return res.sendStatus(400);
+
+    const person = new User(uName, uEmail, uPhone, uMessage);
+    person.save();
+
+    res.redirect('/about');
+}
+
+module.exports.getPerson = (req, res) => {
+    res.render('dashboard', {
+        title: 'Заявки пользователей',
+        persons: User.getAll()
     });
 }

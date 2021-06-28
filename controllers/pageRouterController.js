@@ -28,13 +28,6 @@ module.exports.index = (req, res) => {
     });
 }
 
-module.exports.about = (req, res) => {
-    res.render('aboutView', {
-        title: 'О компании "Юрист-на-Дону", Ростова-на-Дону',
-        isAbout: true
-    });
-}
-
 module.exports.price = (req, res) => {
     res.render('priceView', {
         title: 'Прайс-лист'
