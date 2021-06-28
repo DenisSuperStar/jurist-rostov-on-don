@@ -11,122 +11,47 @@
                     </tr>
                 </thead>
                 <tbody class="price__body">
-                    <tr class="price__item">
-                        <td class="price__cell">Устная консультация для граждан</td>
-                        <td class="price__cell">По телефону</td>
-                        <td class="price__cell">бесплатно</td>
-                    </tr>
-                    <tr class="price__item">
-                        <td class="price__cell">Устная консультация для граждан с изучением документов</td>
-                        <td class="price__cell">Стоимость рассчитывается из проведенной консультации</td>
-                        <td class="price__cell">от 1000руб</td>
-                    </tr>
-                    <tr class="price__item">
-                        <td class="price__cell">Письменная консультация для граждан</td>
-                        <td class="price__cell">Стоимость за один документ</td>
-                        <td class="price__cell">От 2000руб</td>
-                    </tr>
-                    <tr class="price__item">
-                        <td class="price__cell">Составлении претензии</td>
-                        <td class="price__cell">Стоимость за один документ</td>
-                        <td class="price__cell">От 1000руб</td>
-                    </tr>
-                    <tr class="price__item">
-                        <td class="price__cell">Составление гражданско-правовых, трудовых договоров</td>
-                        <td class="price__cell">Срок исполнения от 1 до 3 дней</td>
-                        <td class="price__cell">От 2000руб</td>
-                    </tr>
-                    <tr class="price__item">
-                        <td class="price__cell">Составление сложных (смешанные формы), нестандартных договоров</td>
-                        <td class="price__cell">Срок исполнения от 3 до 5 дней</td>
-                        <td class="price__cell">От 3000руб</td>
-                    </tr>
-                    <tr class="price__item">
-                        <td class="price__cell">Правовая экспертиза договоров, иных документов</td>
-                        <td class="price__cell">Срок исполнения от 1 до 3 дней</td>
-                        <td class="price__cell">От 1500руб</td>
-                    </tr>
-                    <tr class="price__item">
-                        <td class="price__cell">Составление процессуальных документов (иск, отзыв на иск и т.п.)</td>
-                        <td class="price__cell">Стоимость за один документ</td>
-                        <td class="price__cell">От 3000руб</td>
-                    </tr>
+                    {{#if priceTable}}
+                        {{#each priceTable}}
+                            <tr class="price__item">
+                                <td class="price__cell">{{this.name}}</td>
+                                <td class="price__cell">{{this.type}}</td>
+                                <td class="price__cell">{{this.price}}</td>
+                            </tr>
+                        {{else}}
+                            <div class="alert price__text">
+                                <p class="alert-heading price__header">Услуги не указаны</p>
+                            </div>
+                        {{/each}}
+                    {{/if}}
                 </tbody>
             </table>
-            <!-- Показывать только на мобильных устройствах -->
+
             <div class="price__table price__table--responsive">
                 <div class="price__item price__item--responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Наименовние услуги</p>
-                        <hr>
-                        <p class="alert-heading">Описание</p>
-                        <p class="alert-heading">Цена в рублях</p>
+                    <div class="alert price__text">
+                        <p class="alert-heading price__header">Наименовние услуги</p>
+                        <hr class="price__underline">
+                        <p class="alert-heading price__description">Описание</p>
+                        <p class="alert-heading price__description">Цена в рублях</p>
                     </div>
                 </div>
-                <div class="price__item price__item--responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Устная консультация для граждан</p>
-                        <hr>
-                        <p>По телефону</p>
-                        <p>бесплатно</p>
-                    </div>
-                </div>
-                <div class="price__item price__item-responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Устная консультация для граждан с изучением документов</p>
-                        <hr>
-                        <p>Стоимость рассчитывается из проведенной консультации</p>
-                        <p>от 1000руб</p>
-                    </div>
-                </div>
-                <div class="price__item price__item-responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Письменная консультация для граждан</p>
-                        <hr>
-                        <p>Стоимость за один документ</p>
-                        <p>От 2000руб</p>
-                    </div>
-                </div>
-                <div class="price__item price__item-responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Составлении претензии</p>
-                        <hr>
-                        <p>Стоимость за один документ</p>
-                        <p>От 1000руб</p>
-                    </div>
-                </div>
-                <div class="price__item price__item-responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Составление гражданско-правовых, трудовых договоров</p>
-                        <hr>
-                        <p>Срок исполнения от 1 до 3 дней</p>
-                        <p>От 2000руб</p>
-                    </div>
-                </div>
-                <div class="price__item price__item-responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Составление сложных (смешанные формы), нестандартных договоров</p>
-                        <hr>
-                        <p>Срок исполнения от 3 до 5 дней</p>
-                        <p>От 3000руб</p>
-                    </div>
-                </div>
-                <div class="price__item price__item-responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Правовая экспертиза договоров, иных документов</p>
-                        <hr>
-                        <p>Срок исполнения от 1 до 3 дней</p>
-                        <p>От 1500руб</p>
-                    </div>
-                </div>
-                <div class="price__item price__item-responsive">
-                    <div class="alert">
-                        <p class="alert-heading">Составление процессуальных документов (иск, отзыв на иск и т.п.)</p>
-                        <hr>
-                        <p>Стоимость за один документ</p>
-                        <p>От 3000руб</p>
-                    </div>
-                </div>
+                {{#if priceTable}}
+                    {{#each priceTable}}
+                        <div class="price__item price__item--responsive">
+                            <div class="alert price__text">
+                                <p class="alert-heading price__header">{{this.header}}</p>
+                                <hr class="price__underline">
+                                <p class="alert-heading price__description">{{this.type}}</p>
+                                <p class="alert-heading price__description">{{this.price}}</p>
+                            </div>
+                        </div>
+                    {{else}}
+                        <div class="alert price__text">
+                            <p class="alert-heading price__header">Услуги не указаны</p>
+                        </div>
+                    {{/each}}
+                {{/if}}
             </div>
         </div>
     </div>
