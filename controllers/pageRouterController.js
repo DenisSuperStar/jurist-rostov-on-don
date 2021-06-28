@@ -1,25 +1,15 @@
-// подключение модели
-const File = require('../models/home.js');
-// создаем экземпляр объекта File
-const file = new File();
-// получаем массивы методом распаковки
-const {
-    direction,
-    exsistService,
-    aboutService,
-    slides,
-    addressTable
-} = file.convertFileData();
+const homePath = '/models/home.json';
+const pricePath = '/models/price.json';
+const access = require('../dataAccess.js');
+
+const { direction, exsistService, aboutService, slides, addressTable } = access(homePath);
+const { table, price } = access(pricePath);
 
 module.exports.index = (req, res) => {
     res.render('indexView', {
         title: 'Оказание юридических услуг жителям Юрист-на-Дону, г.Ростова и Ростовской области',
         isIndex: true,
-        
-        /*
-            Передаем преобразованные массивы из home.js в представления
-        */
-
+        // инициализация данных из home.json
         direction: direction,
         gallery: exsistService,
         about: aboutService, 
@@ -30,7 +20,9 @@ module.exports.index = (req, res) => {
 
 module.exports.price = (req, res) => {
     res.render('priceView', {
-        title: 'Прайс-лист'
+        title: 'Прайс-лист',
+        priceTable: table,
+        priceList: price
     });
 }
 
