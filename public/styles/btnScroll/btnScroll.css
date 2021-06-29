@@ -67,3 +67,25 @@
     box-shadow: 0 0 0 3em #fff inset;
     transition: all 280ms ease;
 }
+
+@media screen and (max-width: 991px) {
+    .btn-scroll {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        right: auto;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 991px) {
+    .btn-scroll {
+        margin-left: 57.5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .btn-scroll {
+        margin-left: 23.5px;
+    }
+}

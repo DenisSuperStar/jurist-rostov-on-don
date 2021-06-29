@@ -89,6 +89,13 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 991px) {
+    .header__nav-box,
+    .header__support {
+        display: none;
+    }
+}
+
 /*---------------------*/
 .index__cm-item {
     padding: 0 35px 0 0;

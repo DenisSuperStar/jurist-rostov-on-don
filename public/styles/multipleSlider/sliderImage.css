@@ -163,3 +163,34 @@
     height: 300px;
 }
 
+@media screen and (max-width: 575px) {
+    .carousel-title {
+        margin-left: 0;
+        font-size: .9rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .carousel-image > .slick-prev,
+    .carousel-image > .slick-next {
+        width: 23px;
+        padding: 0;
+    }
+
+    .carousel-image > .slick-prev {
+        margin-left: .1rem;
+    }
+    
+    .carousel-image > .slick-prev::after {
+        margin-left: -70px;
+    }
+
+    .carousel-image > .slick-next {
+        margin-right: .1rem;
+    }
+
+    .carousel-image > .slick-next::after {
+        margin-left: -30px;
+    }
+}

@@ -8,7 +8,7 @@
     height: 100%;
 }
 
-.contact__bs-box {
+.contact__form-box {
     padding-top: 7.5rem;
     padding-left: 0;
     padding-right: 0; 
@@ -109,4 +109,35 @@
     box-shadow: 0 0 0 3em #fff inset;
     color: #0d6efd;
     transition: all 300ms ease;
+}
+
+@media screen and (max-width: 360px) {
+    .contact__contact-form {
+        padding-left: 0;
+        margin: 0 12.5px;
+    }
+
+    .contact__input-box {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .contact__input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .contact {
+        margin-top: 0;
+    }
+
+    .contact__image-box {
+        display: none;
+    }
+
+    .contact__form-box {
+        width: 100%;
+    }
 }

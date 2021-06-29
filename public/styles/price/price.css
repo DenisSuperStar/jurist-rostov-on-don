@@ -49,3 +49,37 @@
     background: rgb(13, 110, 253, 0.25);
     color: #000;
 }
+
+.price__text {
+    background: #0d6efd;
+}
+
+.price__header {
+    font-size: 20px;
+    color: #fff;
+}
+
+.price__description {
+    font-size: 18px;
+    color: #fff;
+}
+
+.price__underline {
+    color: #fff;
+    opacity: 1;
+}
+
+@media screen and (min-width: 1200px) {
+    .price__table--responsive {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .price__title {
+        padding-left: .8rem;
+    }
+    .price__table.table-striped {
+        display: none;
+    }
+}

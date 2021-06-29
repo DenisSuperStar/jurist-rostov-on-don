@@ -33,3 +33,10 @@
         padding-left: 11px; 
     }
 }
+
+@media screen and (max-width: 991px) {
+    .state {
+        padding-top: 0;
+        padding-bottom: 7.5rem;
+    }
+}

@@ -21,7 +21,6 @@
 .direction__icon::after {
     font-size: 3.75em;
     color: #fff;
-    
 }
 
 .direction__icon#is-balance-scale::after {
@@ -92,7 +91,7 @@
     text-transform: uppercase;
 }
 
-.direction__container {
+.direction__banner {
     width: calc(50% + 120px);
     position: relative;
     padding-left: 0;
@@ -129,4 +128,51 @@
 
 .direction__bg-image.is-justice {
     background: url('../../assets/justice.jpg');
+}
+
+@media screen and (max-width: 991px) {
+    .direction:first-child .direction__equally {
+        padding: 0 0 7.5rem 0;
+    }
+
+    .direction:last-child .direction__equally {
+        padding: 0;
+    }
+
+    .direction__banner {
+        display: none;
+    }
+
+    .direction__equally {
+        width: 100%;
+        margin: 0;
+    }
+
+    .direction__info {
+        margin: 0;
+    }
+
+    .direction__title {
+        font-size: .75rem;
+        text-align: center;
+    }
+
+    .direction__description-box {
+        text-align: center;
+    }
+
+    .direction__description {
+        font-size: 19px;
+    }
+
+    .direction__icon {
+        position: static;
+        margin-bottom: 7.5rem;
+    }
+
+    .direction__btn-box {
+        display: flex;
+        justify-content: center;
+        padding-left: 25px;
+    }
 }

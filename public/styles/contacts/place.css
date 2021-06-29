@@ -65,7 +65,7 @@
     text-align: right;
 }
 
-.contacts__field {
+.contacts__data {
     padding-left: 0;
     padding-right: 0;
 }
@@ -123,12 +123,89 @@
     font-family: 'Font Awesome 5 Pro';
 }
 
-/*.cm-location__item {
-    display: flex;
-    justify-content: flex-end;
+@media screen and (max-width: 991px) {
+    .contacts__address {
+        width: 100%;
+    }
+
+    .contacts__index {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contacts__pic {
+        position: static;
+        margin-bottom: 7.5rem;
+    }
+
+    .contacts__title-box {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .contacts__slogan {
+        max-width: 412px;
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+
+    .contacts__title-box--small {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contacts__title--small {
+        font-size: 15.8px;
+    }
+
+    .contacts__data .contacts__cell {
+        max-width: 414px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contacts__info-box {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: .5rem;
+    }
+
+    .contacts__info-box#phone {
+        padding: 0;
+    }
+
+    .contacts__icon {
+        padding: 0 3em;
+        margin: 0 auto .8rem;
+    }
+
+    .contacts__map {
+        width: 100%;
+    }
 }
 
-.cm-location__map {
-    padding-left: 0;
-    z-index: -1;
-}*/
+@media screen and (min-width: 361px) and (max-width: 991px) {
+    .contacts__slogan {
+        padding-left: 30px;
+        font-size: 30.8px;
+    }
+
+    .contacts__info {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .contacts__slogan {
+        padding-left: 15px;
+        font-size: 24.8px;
+    }
+
+    .contacts__info {
+        font-size: 15px;
+    }
+
+}
