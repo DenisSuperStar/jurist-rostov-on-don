@@ -1,10 +1,10 @@
-<div class="container">
-    <div class="row">
+<div class="container pic-box">
+    <div class="row pic">
         {{#if gallery}}
             {{#each gallery}}
-                <div class="col-4">
-                    <div class="box">
-                        <div class="card self-card">
+                <div class="col-4 pic__item">
+                    <div class="box pic__card-box">
+                        <div class="card self-card pic__card">
                             <img src="{{srcThemeImage}}" class="img-fluid self-card__img" alt="{{imgName}}">
                             <div class="card-body self-card__body">
                                 <h5 class="card-title self-card__title">{{cardTitle}}</h5>
