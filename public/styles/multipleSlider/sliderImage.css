@@ -163,14 +163,6 @@
     height: 300px;
 }
 
-@media screen and (max-width: 575px) {
-    .carousel-title {
-        margin-left: 0;
-        font-size: .9rem;
-        text-align: center;
-    }
-}
-
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .carousel-image > .slick-prev,
     .carousel-image > .slick-next {
@@ -192,5 +184,54 @@
 
     .carousel-image > .slick-next::after {
         margin-left: -30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .carousel-title {
+        margin-left: 0;
+        font-size: .9rem;
+        text-align: center;
+    }
+
+    .carousel-image__text-item {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .carousel-image__bg-title {
+        margin-top: 2.1em;
+        text-align: center !important;
+    }
+
+    .carousel-image__bg-text {
+        width: auto !important;
+        font-size: 20px;
+    }
+
+    .carousel-image__bg-info {
+        padding-right: 3em;
+    }
+
+    .carousel-image > .slick-dots {
+        display: flex;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 0 20px 0;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .carousel-image__bg-text {
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .carousel-image__bg-title {
+        font-size: 1.2rem;
     }
 }
