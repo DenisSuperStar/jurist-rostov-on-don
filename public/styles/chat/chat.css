@@ -1,0 +1,78 @@
+.new-message {
+    height: 175px;
+    overflow: auto;
+}
+
+.new-message__nickname-val,
+.new-message__user-email-val,
+.new-message__send-msg {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    background: transparent;
+    font-size: 1.55rem;
+}
+
+.new-message__chat-message {
+    padding: 0;
+    border-radius: 0;
+    color: #fff;
+    background: transparent;
+    font-size: 1.9rem;
+}
+
+.form-message-box {
+    background: #0d6efd;
+    padding: 60px 0;
+}
+
+.form-message__content-box {
+    padding: 0;
+}
+
+.form-message__input,
+.form-message__input:focus {
+    width: 100%;
+    height: calc(54.4px * 1.5);
+    border-radius: 0;
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.55rem;
+}
+
+.form-message__input::placeholder {
+    color: #fff;
+}
+
+.form-message__send-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-message__send-btn {
+    display: block;
+    width: 100%;
+    padding-top: 0;
+    padding-left: 3em;
+    padding-right: 3em;
+    height: 3.2em;
+    font-size: .9rem;
+    border: none;
+    background: transparent;
+    line-height: 3.1em;
+    color: #fff;
+    box-shadow: 0 0 0 2px #fff inset;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-weight: 700;
+}
+
+.form-message__send-btn:hover {
+    box-shadow: 0 0 0 3em #fff inset;
+    color:#0d6efd;
+    transition: all 300ms ease;
+}
