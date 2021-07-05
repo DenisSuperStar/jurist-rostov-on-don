@@ -1,5 +1,5 @@
 <div class="container-fluid contact">
-    <div class="row">
+    <div class="row contact__contact-us-box">
         <div class="col-5 contact__image-box">
             <div class="contact__bg-image"></div>
         </div>
@@ -9,25 +9,67 @@
                 <div class="contact__title-box">
                     <h2 class="contact__title">03 ____ Связь с нами</h2>
                 </div>
-                <form action="/" class="contact__contact-form" id="contactUs" name="sendUsForm" method="post">
-                    <div class="contact__content-form">
-                        <label class="form-label contact__input-box">
-                            <input type="text" class="form-control contact__input" placeholder="Имя" name="name" required>
-                        </label>
-                        <label class="form-label contact__input-box">
-                            <input type="email" class="form-control contact__input" placeholder="Email" name="email" required>
-                        </label>
-                    </div>
-                    <div class="contact__wrapper-label">
-                        <label class="form-label contact__input-box">
-                            <input type="text" class="form-control contact__input" placeholder="Номер телефона" name="phone" required>
-                        </label>
-                    </div>
-                    <div class="contact__btn-box">
-                        <input type="submit" class="btn btn-light contact__btn is-send" value="Отправить">
-                    </div>
-                </form>
+                <div class="contact__contact-form-box" id="contactUsBox">
+                    <form class="contact__contact-form" id="contactUs">
+                        <div class="contact__content-form">
+                            <label class="form-label contact__input-box">
+                                <input
+                                    type="text" 
+                                    class="form-control contact__input" 
+                                    id="nickName" 
+                                    placeholder="Имя"
+                                    autocomplete="off" 
+                                    required
+                                >
+                            </label>
+                            <label class="form-label contact__input-box">
+                                <input 
+                                    type="email" 
+                                    class="form-control contact__input" 
+                                    id="email" 
+                                    placeholder="E-mail"
+                                    autocomplete="off" 
+                                    required
+                                >
+                            </label>
+                        </div>
+                        <div class="contact__btn-box">
+                            <input 
+                                type="submit" 
+                                class="btn btn-light contact__btn is-send"
+                                autocomplete="off" 
+                                value="Открыть чат"
+                                required
+                            >
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="form-message-box d-none" id="messageChat">
+        <div class="container form-message-box__new-message-box">
+            <div class="row form-message-box__new-message">
+                <div class="new-message" id="newMessage"></div>
+            </div>
+        </div>
+        <form class="form-message ml-2 mr-2" id="messageForm" name="chat">
+            <div class="container form-message__content-box">
+                <div class="row form-message__form-row">
+                    <div class="col-10 form-message__input-box">
+                        <input 
+                            type="text"
+                            class="form-control form-message__input"
+                            autocomplete="off"
+                            placeholder="Напишите сообщение..."
+                            id="messageInput"
+                        >
+                    </div>
+                    <div class="col-2 form-message__send-box">
+                        <button type="submit" class="btn btn-light form-message__send-btn">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
