@@ -1,3 +1,7 @@
+.contact__input-box {
+    position: relative;
+}
+
 .contact__input.error {
     width: 296px;
     height: 54.4px;
@@ -16,6 +20,7 @@
 }
 
 .contact__input.error + .error {
+    position: absolute;
     display: block;
     color: #ff2800;
     font-size: 12px;
