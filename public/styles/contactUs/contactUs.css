@@ -1,4 +1,7 @@
-.contact__image-box {padding: 0;}
+.contact,
+.contact__image-box {
+    padding: 0;
+}
 
 .contact__bg-image {
     background-image: url('../../assets/place.jpg');
