@@ -1,12 +1,14 @@
-const http = require('http');
 const express = require('express');
+const http = require('http');
 const app = express();
+const server = http.createServer(app);
+const { Server } = require('socket.io');
+const io = new Server(server);
 const path = require('path');
 const expHbs = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
 const contact = require('./controllers/contactUsController.js');
 const process = require('./controllers/processUserController.js');
-const server = http.createServer(app);
 
 // подключаем модуль парсинга
 const bodyParser = require('body-parser');
@@ -17,6 +19,25 @@ const urlEncodedParser = bodyParser.urlencoded({
 
 // установка значения порта
 const port = 3000;
+
+const users = [];
+
+io.on('connection', socket => {
+    socket.on('login', nick => {
+        if (nick) {
+            users.push(nick);
+            io.emit('login', {status: 'OK'});
+        } else {
+            io.emit('login', {status: 'FAILED'});
+        }
+    });
+});
+
+io.on('connection', socket => {
+    socket.on('chat message', msg => {
+        io.emit('chat message', msg);
+    });
+});
 
 server.listen(port, () => {
     console.log(`Сервер запущен на порту ${port}`);
@@ -62,11 +83,4 @@ app.get('/404', pages.notFound);
 // обработка запроса к несуществующей странице
 app.use((req, res) => {
     res.status(404).sendFile(path.resolve() + '/public/404.html');
-});
-
-// обработка серверных ошибок
-app.use((err, req, res) => {
-    console.log(err.statusCode);
-    console.log(err.statusMessage);
-    res.status(500).sendFile(path.resolve() + '/public/500.html');
 });
