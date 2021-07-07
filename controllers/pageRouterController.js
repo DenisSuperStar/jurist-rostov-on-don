@@ -5,6 +5,9 @@ const access = require('../dataAccess.js');
 const { direction, exsistService, aboutService, slides, addressTable } = access(homePath);
 const { table, price } = access(pricePath);
 
+const today = new Date();
+const currentYear = today.getFullYear();
+
 module.exports.index = (req, res) => {
     res.render('indexView', {
         title: 'Оказание юридических услуг жителям Юрист-на-Дону, г.Ростова и Ростовской области',
@@ -14,7 +17,9 @@ module.exports.index = (req, res) => {
         gallery: exsistService,
         about: aboutService, 
         condition: slides,
-        address: addressTable
+        address: addressTable,
+        phone: '+7 (951) 839-59-39',
+        year: currentYear
     });
 }
 
