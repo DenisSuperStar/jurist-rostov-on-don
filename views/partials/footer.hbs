@@ -8,27 +8,18 @@
                     <div class="alert footer__slogan-text">Всегда на страже ваших интересов</div>
                 </div>
             </div>
-            <!-- вывести динамически с помощью each -->
-            <!-- начало -->
-            <ul class="list-group footer__address">
-                <li class="list-group-item footer__item-address">
-                    <div class="footer__icon-address" id="is-home"></div>
-                    <div class="alert footer__text-icon">Ростов-на-Дону, улица Максима Горького</div>
-                </li>
-                <li class="list-group-item footer__item-address">
-                    <div class="footer__icon-address" id="is-envelope"></div>
-                    <div class="alert footer__text-icon">sergeynazarov161@yandex.ru</div>
-                </li>
-                <li class="list-group-item footer__item-address">
-                    <div class="footer__icon-address" id="is-clock"></div>
-                    <div class="alert footer__text-icon">Пон-Вс: 10.00 - 20.00</div>
-                </li>
-                <li class="list-group-item footer__item-address">
-                    <div class="footer__icon-address" id="is-phone"></div>
-                    <div class="alert footer__text-icon">+7 (951) 839-59-39</div>
-                </li>
-            </ul>
-            <!-- конец -->
+            {{#if address}}
+                <ul class="list-group footer__address">
+                    {{#each address}}
+                        <li class="list-group-item footer__item-address">
+                            <div class="footer__icon-address" id="is-{{this.sectionName}}"></div>
+                            <div class="alert footer__text-icon">{{this.info}}</div>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{else}}
+                <div class="alert alert-primary">Вы не указали свое местоположение</div>
+            {{/if}}
             <div class="alert footer__icon-title">Подписаться</div>
             <ul class="footer__icon-box">
                 <li class="footer__item-icon">
