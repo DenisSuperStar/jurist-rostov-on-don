@@ -6,19 +6,17 @@ $(() => {
     const userEmail = $('#email');
     const messageChat = $('#messageChat');
     const messageForm = $('#messageForm');
-    const sendMessage = $('#sendMessage');
     const messageInput = $('#messageInput');
-
-    /*const sendMessage = $('#sendMessage');*/
-    /*sendMessage.on('submit', e => {
-        e.preventDefault();
-    });*/
 
     const newMessage = $('#newMessage');
 
     contactUs.on('submit', e => {
         e.preventDefault();
-        socket.emit('login', nickName.val());
+
+        socket.emit('login', {
+            nick: nickName.val(),
+            email: userEmail.val()
+        });
     });
 
     messageForm.on('submit', e => {
