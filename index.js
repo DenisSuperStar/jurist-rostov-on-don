@@ -12,6 +12,7 @@ const process = require('./controllers/processUserController.js');
 
 // подключаем модуль парсинга
 const bodyParser = require('body-parser');
+const { nickname } = require('./credit/credit.js');
 // создаем экземпляр парсера
 const urlEncodedParser = bodyParser.urlencoded({
     extended: false
@@ -23,9 +24,9 @@ const port = 3000;
 const users = [];
 
 io.on('connection', socket => {
-    socket.on('login', nick => {
-        if (nick) {
-            users.push(nick);
+    socket.on('login', user => {
+        if ((user.nick) && (user.email)) {
+            users.push(user.nick);
             io.emit('login', {status: 'OK'});
         } else {
             io.emit('login', {status: 'FAILED'});
