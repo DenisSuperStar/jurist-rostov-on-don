@@ -65,4 +65,11 @@ $(() => {
             </div>
         `);
     });
+
+    socket.on('disconnected', status => {
+        if (status.disconnected === 'OK') {
+            contactUsBox.removeClass('d-none');
+            messageChat.addClass('d-none');
+        }
+    });
 });
