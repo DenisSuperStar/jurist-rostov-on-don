@@ -7,20 +7,16 @@ const io = new Server(server);
 const path = require('path');
 const expHbs = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
-const contact = require('./controllers/contactUsController.js');
 const process = require('./controllers/processUserController.js');
-
-// подключаем модуль парсинга
-const bodyParser = require('body-parser');
-const { nickname } = require('./credit/credit.js');
-// создаем экземпляр парсера
-const urlEncodedParser = bodyParser.urlencoded({
-    extended: false
-});
-
+const { online } = require('./credit/credit.js');
+const { time } = require('./credit/credit.js');
+let timeServer = time;
+const timeStartOnline = online;
+let timeOnline;
 // установка значения порта
 const port = 3000;
 
+// сохранение данных о пользователях
 const users = [];
 
 io.on('connection', socket => {
@@ -28,16 +24,42 @@ io.on('connection', socket => {
         if ((user.nick) && (user.email)) {
             users.push(user.nick);
             io.emit('login', {status: 'OK'});
+
+            timeOnline = setInterval(() => {
+                if (timeServer < 1) {
+                    clearInterval(timeOnline);
+                    socket.disconnect(true);
+                    socket.on('disconnect', () => {
+                        console.log('Разрываем соединение с бд!');
+                        io.emit('disconnected', {disconnect: 'OK'});
+                    });
+                }
+                // временно присутствует для отслеживания timeServer
+                console.log(timeServer);
+                timeServer--;
+            }, timeStartOnline);
         } else {
             io.emit('login', {status: 'FAILED'});
         }
     });
-});
 
-io.on('connection', socket => {
     socket.on('chat message', msg => {
         io.emit('chat message', msg);
     });
+
+    socket.on('disconnect', () => {
+        clearInterval(timeOnline);
+        timeServer = 600;
+        console.log(timeServer);
+        console.log('Разрываем соединение с бд!');
+    });
+});
+
+// подключаем модуль парсинга
+const bodyParser = require('body-parser');
+// создаем экземпляр парсера
+const urlEncodedParser = bodyParser.urlencoded({
+    extended: false
 });
 
 server.listen(port, () => {
@@ -58,10 +80,7 @@ app.set('views', './views');
 app.use(express.static(path.resolve() + '/public'));
 
 // обработка запроса по корневому адресу /
-app.get('/', urlEncodedParser, pages.index);
-
-// обработка запроса отправки формы по корневому адресу /
-app.post('/', urlEncodedParser, contact.contactUs);
+app.get('/', pages.index);
 
 // обработка гет-запроса по адресу /about
 app.get('/about', urlEncodedParser, process.addPerson);
