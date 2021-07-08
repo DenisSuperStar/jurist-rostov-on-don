@@ -1,6 +1,5 @@
 # Dependency directories
 node_modules/
-credit/
 # Upload directory
 uploads/
 # Optional npm cache directory
