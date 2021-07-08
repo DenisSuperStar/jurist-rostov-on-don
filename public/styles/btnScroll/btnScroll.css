@@ -74,7 +74,6 @@
         top: 50%;
         left: 0;
         right: auto;
-        margin-top: 100px;
     }
 }
 
@@ -87,5 +86,17 @@
 @media screen and (max-width: 375px) {
     .btn-scroll {
         margin-left: 23.5px;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 990px) {
+    .btn-scroll {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .btn-scroll {
+        margin-top: 30px;
     }
 }

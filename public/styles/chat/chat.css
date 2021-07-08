@@ -76,3 +76,18 @@
     color:#0d6efd;
     transition: all 300ms ease;
 }
+
+@media screen and (max-width: 360px) {
+    .form-message__form-row {
+        margin: 0 12px;
+    }
+
+    .form-message__input-box {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-message__input-box,
+    .form-message__send-box {
+        width: 100%;
+    }
+}

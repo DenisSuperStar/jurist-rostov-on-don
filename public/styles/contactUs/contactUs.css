@@ -115,9 +115,19 @@
 }
 
 @media screen and (max-width: 360px) {
+    .contact__form-box {
+        max-width: 360px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .contact {
+        margin-top: 0;
+    }
+
     .contact__contact-form {
         padding-left: 0;
-        margin: 0 12.5px;
+        margin: 0 34px;
     }
 
     .contact__input-box {
@@ -129,18 +139,13 @@
     .contact__input {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 991px) {
-    .contact {
-        margin-top: 0;
-    }
 
     .contact__image-box {
         display: none;
     }
 
     .contact__form-box {
+        margin: 0 auto;
         width: 100%;
     }
 }

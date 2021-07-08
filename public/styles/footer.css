@@ -284,3 +284,28 @@
     color: #0d6efd;
     line-height: 1.4;
 }
+
+@media screen and (max-width: 576px) {
+    .footer__company-data,
+    .footer__service,
+    .footer__contact,
+    .footer__service-item {
+        width: 100%;
+    }
+
+    .footer__contact-title {
+        text-align: right;
+    }
+
+    .footer__support {
+        padding-left: .7rem;
+    }
+
+    .footer__phone-number {
+        width: calc(80% + 8px);
+    }
+
+    .footer__copyright {
+        position: static;
+    }
+}
