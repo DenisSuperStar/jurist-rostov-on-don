@@ -1,6 +1,11 @@
-@media screen and (max-width: 576px) {
+.header__menu-humb-list::after {
+    content: '\f0c9';
+    font-family:  'Font Awesome 5 Pro';
+}
+
+@media screen and (min-width: 992px) {
     .header__menu-humb-box {
-        margin-left: 40px;
+        display: none;
     }
 }
 
@@ -54,13 +59,14 @@
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 360px) and (max-width: 576px) {
     .header__menu-humb-box {
-        display: none;
+        margin-left: 40px;
     }
 }
 
-.header__menu-humb-list::after {
-    content: '\f0c9';
-    font-family:  'Font Awesome 5 Pro';
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .header__menu-humb-box {
+        margin-left: 20px;
+    }
 }

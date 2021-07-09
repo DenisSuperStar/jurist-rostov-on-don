@@ -114,15 +114,14 @@
     transition: all 300ms ease;
 }
 
-@media screen and (max-width: 360px) {
-    .contact__form-box {
-        max-width: 360px;
-    }
-}
-
 @media screen and (max-width: 991px) {
     .contact {
         margin-top: 0;
+    }
+
+    .contact__contact-us-box {
+        width: 100%;
+        margin: 0 auto;
     }
 
     .contact__contact-form {
@@ -148,4 +147,28 @@
         margin: 0 auto;
         width: 100%;
     }
+}
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
+    .header--dubbed.out {
+        max-width: 414px;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 375px) {
+    .header--dubbed.out {
+        max-width: 375px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 360px) {
+    .header--dubbed.out {
+        max-width: 360px;
+    } 
+}
+
+@media screen and (max-width: 320px) {
+    .header--dubbed.out {
+        max-width: 320px;
+    } 
 }

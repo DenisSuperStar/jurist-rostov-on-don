@@ -285,6 +285,17 @@
     line-height: 1.4;
 }
 
+.footer__icon-address.is-colored {
+    color: #000;
+    border: 2px solid #0d6efd;
+    cursor: pointer;
+}
+
+.footer__service-item.is-colored {
+    color: #0d6efd;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 576px) {
     .footer__company-data,
     .footer__service,
@@ -307,5 +318,11 @@
 
     .footer__copyright {
         position: static;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .footer__slogan-text {
+        width: 100%;
     }
 }

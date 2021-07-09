@@ -207,5 +207,11 @@
     .contacts__info {
         font-size: 15px;
     }
+}
 
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .contacts {
+        padding: 0;
+        margin: 0 7px;
+    }
 }
