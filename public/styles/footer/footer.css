@@ -325,4 +325,16 @@
     .footer__slogan-text {
         width: 100%;
     }
+
+    .footer__icon-box {
+        margin: 0 .78rem;
+    }
+
+    .footer__contact-title {
+        padding-right: 0;
+    }
+
+    .footer__support {
+        padding: 0;
+    }
 }

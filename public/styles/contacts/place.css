@@ -198,20 +198,18 @@
 }
 
 @media screen and (max-width: 360px) {
-
     .contacts__slogan {
         padding-left: 15px;
         font-size: 24.8px;
-    }
-
-    .contacts__info {
-        font-size: 15px;
-    }
+    } 
 }
 
 @media screen and (min-width: 320px) and (max-width: 359px) {
     .contacts {
-        padding: 0;
-        margin: 0 7px;
+        margin: 0;
+    }
+
+    .contacts__info {
+        font-size: 14px;
     }
 }
