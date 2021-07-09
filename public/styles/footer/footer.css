@@ -296,6 +296,18 @@
     cursor: pointer;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .footer__company-data,
+    .footer__service,
+    .footer__contact {
+        width: 50%;
+    }
+
+    .footer__copyright {
+        position: static;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .footer__company-data,
     .footer__service,
