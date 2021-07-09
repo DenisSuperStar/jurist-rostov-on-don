@@ -11,6 +11,12 @@
     border: none;
 }
 
+@media screen and (max-width: 767px) {
+    .contact__input.error {
+        width: 100%;
+    }
+}
+
 .contact__input:focus.error {
     border-radius: 0;
     background: rgba(255, 255, 255, .1);
@@ -26,6 +32,15 @@
     font-size: 12px;
     padding-top: .3rem;
     padding-left: .7rem;
+}
+
+@media screen and (max-width: 767px) {
+    .contact__input.error + .error {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 20px);
+        margin-top: 15px;
+    }
 }
 
 .contact-form__input.error {
