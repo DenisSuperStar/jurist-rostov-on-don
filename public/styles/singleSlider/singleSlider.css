@@ -98,6 +98,12 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .slider-text {
+        z-index: -1;
+    }
+}
+
 @media screen and (min-width: 376px) and (max-width: 991px) {
     .slider-text__title {
         padding-left: 2.5em;
