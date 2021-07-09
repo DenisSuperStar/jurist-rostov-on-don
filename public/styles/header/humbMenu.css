@@ -1,0 +1,27 @@
+@media screen and (max-width: 576px) {
+    .header__menu-humb-box {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header__menu-humb-box {
+        margin-right: auto;
+    }
+
+    .header__menu-humb {
+        font-size: 27px;
+        color: #0d6efd;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header__menu-humb-box {
+        display: none;
+    }
+}
+
+.header__menu-humb::after {
+    content: '\f0c9';
+    font-family:  'Font Awesome 5 Pro';
+}
