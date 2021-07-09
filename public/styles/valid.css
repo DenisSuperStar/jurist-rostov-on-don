@@ -11,7 +11,7 @@
     border: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
     .contact__input.error {
         width: 100%;
     }
@@ -34,7 +34,8 @@
     padding-left: .7rem;
 }
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 1199px) {
     .contact__input.error + .error {
         position: absolute;
         top: 0;
