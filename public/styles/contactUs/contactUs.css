@@ -114,6 +114,26 @@
     transition: all 300ms ease;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .contact__contact-form {
+      padding: 0 2.1rem;
+    }
+
+    .contact__content-form {
+      display: flex;
+    }
+
+    .contact__input-box,
+    .contact__btn-box {
+      width: 50%;
+    }
+
+    .contact__input,
+    .contact__btn {
+      width: 100%;
+    }
+  }
+
 @media screen and (max-width: 991px) {
     .contact {
         margin-top: 0;
