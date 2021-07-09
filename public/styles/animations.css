@@ -41,15 +41,10 @@
     transition: all .3s ease;
 }
 
-@media screen and (max-width: 991px) {
-    .header--dubbed.out {
-        margin-top: 22px;
-    }
-}
-
 @media screen and (max-width: 360px) {
     .header--dubbed.out {
         max-width: 360px;
+        margin-top: 22px;
     }
 }
 
