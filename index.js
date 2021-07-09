@@ -8,6 +8,9 @@ const path = require('path');
 const expHbs = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
 const process = require('./controllers/processUserController.js');
+const minify = require('express-minify');
+const uglify = require('uglify-js');
+const cssMin = require('cssmin');
 const { online } = require('./credit/credit.js');
 const { time } = require('./credit/credit.js');
 let timeServer = time;
@@ -70,6 +73,16 @@ const createHbs = expHbs.create({
     defaultLayout: 'main',
     extname: 'hbs'
 });
+
+app.use(minify({
+    cache: path.resolve() + '/cache',
+    uglifyJsModule: uglify,
+    cssmin: cssMin,
+    errorHandler: undefined,
+    js_match: '/\.js$/',
+    css_match: '/\.css$/',
+    json_match: '/\.json$/'
+}));
 
 app.engine('hbs', createHbs.engine);
 
