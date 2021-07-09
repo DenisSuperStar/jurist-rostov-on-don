@@ -123,9 +123,3 @@
         padding-left: 1.15em;
     }
 }
-
-@media screen and (min-width: 320px) and (max-width: 359px) {
-    .bg-color, .bg {
-        min-width: 330px;
-    }
-}
