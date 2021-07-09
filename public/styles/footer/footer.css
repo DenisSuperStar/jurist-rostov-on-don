@@ -1,0 +1,311 @@
+.footer {
+    padding: 7.5em 0;
+}
+
+.footer__logo-box {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 65px;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 0;
+    margin: 0;
+}
+
+.footer__logo::after {
+    content: '\f42a';
+    font-family: 'Font Awesome 5 Brands';
+    font-size: 27px;
+    color: #fff;
+}
+
+.footer__slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 215px;
+    height: max-content;
+    font-size: 18px;
+    font-weight: 900;
+    background: transparent;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer__slogan-text {
+    width: 295px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    padding: 2px 0 2px 12px;
+    margin: 0;
+    font-size: 15px;
+    color: #0d6efd;
+    border-radius: 0;
+    border: none;
+}
+
+.footer__slogan,
+.footer__company-data {
+    padding: 0;
+}
+
+.footer__item-address {
+    display: flex;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+}
+
+.footer__icon-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 60px;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #0d6efd;
+}
+
+.footer__icon-address#is-phone::after {
+    content: '\f879';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.footer__icon-address#is-clock::after {
+    content: '\f34e';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.footer__icon-address#is-home::after {
+    content: '\f015';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.footer__icon-address#is-envelope::after {
+    content: '\f0e0';
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.footer__text-icon {
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    padding-bottom: 0;
+    font-size: .975em;
+}
+
+.footer__icon-title {
+    font-size: .975em;
+}
+
+.footer__icon-box {
+    width: max-content;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 0 1.4rem;
+}
+
+.footer__item-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    background: #0d6efd;
+    box-shadow: 0 0 0 3em transparent inset;
+    margin-right: 1rem;
+    transition: all 280ms ease;
+}
+
+.footer__item-icon:hover {
+    background: transparent;
+    box-shadow: 0 0 0 1px #0d6efd inset;
+}
+
+.footer__item-icon:hover > .footer__item {
+    color: #0d6efd;
+}
+
+.footer__item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.6em;
+}
+
+.footer__item--social#twitt::after {
+    content: '\f099';
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.footer__item--social#vk::after {
+    content: '\f189';
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.footer__item--social#inst::after {
+    content: '\f16d';
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.footer__item--social#in::after {
+    content: '\f0e1';
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.footer__service {
+    margin-top: 10px;
+}
+
+.footer__service-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 215px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 900;
+    background: transparent;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0;
+    padding: 0;
+}
+
+.footer__service-list {
+    border-radius: 0;
+}
+
+.footer__service-item {
+    width: 415px;
+    border-radius: 0;
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #000;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: .5rem;
+    margin-bottom: .5em;
+}
+
+.footer__contact {
+    position: relative;
+}
+
+.footer__phone-number,
+.footer__contact-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+}
+
+.footer__contact-title,
+.footer__support {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.footer__contact-title {
+    font-weight: 900;
+    background: transparent;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0;
+    margin: 0 0 20px;
+}
+
+.footer__support {
+    display: flex;
+    border-radius: 0;
+}
+
+.footer__call-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 61px;
+    height: 60px;
+    background: #0d6efd;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.footer__call-btn::after {
+    content: '\f879';
+    font-family: 'Font Awesome 5 Pro';
+    transform: rotate(8deg);
+    font-weight: 300;
+}
+
+.footer__phone-number {
+    border: none;
+    padding: 0 1.7em;
+    cursor: pointer;
+}
+
+.footer__copyright {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #0d6efd;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 576px) {
+    .footer__company-data,
+    .footer__service,
+    .footer__contact,
+    .footer__service-item {
+        width: 100%;
+    }
+
+    .footer__contact-title {
+        text-align: right;
+    }
+
+    .footer__support {
+        padding-left: .7rem;
+    }
+
+    .footer__phone-number {
+        width: calc(80% + 8px);
+    }
+
+    .footer__copyright {
+        position: static;
+    }
+}
