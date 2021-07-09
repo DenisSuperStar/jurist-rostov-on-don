@@ -8,21 +8,40 @@
                 <div class="header__slogan">Юрист-на-Дону</div>
             </div>
             <div class="header__menu-humb-box">
-                <div class="header__menu-humb"></div>
-                <div class="header__menu-humb-dropdown-box">
+                <div class="header__menu-humb-list" id="btnHumb"></div>
+                <div class="header__menu-humb-dropdown-box" id="dropdownHumb">
                     <ul class="header__menu-humb">
+                        {{#if isIndex}}
+                            <li class="header__item-humb is-active">
+                                <a href="#" class="header__humb-link">Главная</a>
+                            </li>
+                        {{else}}
+                            <li class="header__item-humb">
+                                <a href="#" class="header__humb-link">Главная</a>
+                            </li>
+                        {{/if}}
+                        {{#if isAbout}}
+                            <li class="header__item-humb is-active">
+                                <a href="#" class="header__humb-link">О проекте</a>
+                            </li>
+                        {{else}}
+                            <li class="header__item-humb">
+                                <a href="#" class="header__humb-link">О проекте</a>
+                            </li>
+                        {{/if}}
                         <li class="header__item-humb">
-                            <a href="#" class="header__humb-link">Главная</a>
+                            <a href="#" class="header__humb-link">Услуги компании</a>
                         </li>
-                        <li class="header__item-humb">
-                            <a href="#" class="header__humb-link">О проекте</a>
-                            <ul class="header__submenu">
-                                <li class="header__item-submenu">Услуги компании</li>
-                            </ul>
-                        </li>
-                        <li class="header__item-humb">
-                            <a href="#" class="header__humb-link">Контакты</a>
-                        </li>
+                        {{#if isContact}}
+                            <li class="header__item-humb is-active">
+                                <a href="#" class="header__humb-link">Контакты</a>
+                            </li>
+                        {{else}}
+                            <li class="header__item-humb">
+                                <a href="#" class="header__humb-link">Контакты</a>
+                            </li>
+                        {{/if}}
+                        
                     </ul>
                 </div>
             </div>
