@@ -95,3 +95,9 @@
         display: none;
     }
 }
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .header--dubbed.out {
+        margin-top: 15px;
+    }
+}
