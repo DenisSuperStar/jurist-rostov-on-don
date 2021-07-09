@@ -41,13 +41,12 @@
     margin-bottom: 15px;
 }
 
-.btn-scroll__input--up,
-.btn-scroll__input--down {
+.btn-scroll__input {
     display: block;
     padding-top: 0;
     width: 60px;
     height: 60px;
-    font-size: .9em;
+    font-size: .9rem;
     border: none;
     border-radius: 0;
     background: #0d6efd;
@@ -62,8 +61,8 @@
     color: #0d6efd;
 }
 
-.btn-scroll__up:hover > .btn-scroll__input--up,
-.btn-scroll__down:hover > .btn-scroll__input--down {
+.btn-scroll__up:hover > .btn-scroll__input,
+.btn-scroll__down:hover > .btn-scroll__input {
     box-shadow: 0 0 0 3em #fff inset;
     transition: all 280ms ease;
 }
