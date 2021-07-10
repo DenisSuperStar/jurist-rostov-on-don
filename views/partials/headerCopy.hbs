@@ -29,9 +29,15 @@
                                 <a href="#" class="header__humb-link">О проекте</a>
                             </li>
                         {{/if}}
-                        <li class="header__item-humb">
-                            <a href="#" class="header__humb-link">Услуги компании</a>
-                        </li>
+                        {{#if isPrice}}
+                            <li class="header__item-humb is-active">
+                                <a href="#" class="header__humb-link">Услуги компании</a>
+                            </li>
+                        {{else}}
+                            <li class="header__item-humb">
+                                <a href="#" class="header__humb-link">Услуги компании</a>
+                            </li>
+                        {{/if}}
                         {{#if isContact}}
                             <li class="header__item-humb is-active">
                                 <a href="#" class="header__humb-link">Контакты</a>
