@@ -11,8 +11,8 @@
                     </tr>
                 </thead>
                 <tbody class="price__body">
-                    {{#if priceTable}}
-                        {{#each priceTable}}
+                    {{#if priceList}}
+                        {{#each priceList}}
                             <tr class="price__item">
                                 <td class="price__cell">{{this.name}}</td>
                                 <td class="price__cell">{{this.type}}</td>
@@ -36,11 +36,11 @@
                         <p class="alert-heading price__description">Цена в рублях</p>
                     </div>
                 </div>
-                {{#if priceTable}}
-                    {{#each priceTable}}
+                {{#if priceList}}
+                    {{#each priceList}}
                         <div class="price__item price__item--responsive">
                             <div class="alert price__text">
-                                <p class="alert-heading price__header">{{this.header}}</p>
+                                <p class="alert-heading price__header">{{this.name}}</p>
                                 <hr class="price__underline">
                                 <p class="alert-heading price__description">{{this.type}}</p>
                                 <p class="alert-heading price__description">{{this.price}}</p>
@@ -54,5 +54,8 @@
                 {{/if}}
             </div>
         </div>
+    </div>
+    <div class="alert alert-light price__redirect">
+        <a href="/" class="btn price__redirect-btn">На главную</a>
     </div>
 </div>
