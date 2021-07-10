@@ -1,65 +1,72 @@
-<div class="container footer__content">
-    <div class="row footer__port">
-        <div class="col-4 footer__company-data">
-            <div class="footer__logo-box">
-                <div class="alert footer__logo"></div>
-                <div class="footer__text">
-                    <div class="alert footer__slogan">Юрист-на-Дону</div>
-                    <div class="alert footer__slogan-text">Всегда на страже ваших интересов</div>
-                </div>
-            </div>
-            {{#if address}}
-                <ul class="list-group footer__address">
-                    {{#each address}}
-                        <li class="list-group-item footer__item-address">
-                            <div class="footer__icon-address is-address" id="is-{{this.sectionName}}"></div>
-                            <div class="alert footer__text-icon">{{this.info}}</div>
+{{#if isPrice}}
+    <footer></footer>
+{{else}}
+    <footer class="footer">
+        <div class="container footer__content">
+            <div class="row footer__port">
+                <div class="col-4 footer__company-data">
+                    <div class="footer__logo-box">
+                        <div class="alert footer__logo"></div>
+                        <div class="footer__text">
+                            <div class="alert footer__slogan">Юрист-на-Дону</div>
+                            <div class="alert footer__slogan-text">Всегда на страже ваших интересов</div>
+                        </div>
+                    </div>
+                    {{#if address}}
+                        <ul class="list-group footer__address">
+                            {{#each address}}
+                                <li class="list-group-item footer__item-address">
+                                    <div class="footer__icon-address is-address" id="is-{{this.sectionName}}"></div>
+                                    <div class="alert footer__text-icon">{{this.info}}</div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    {{else}}
+                        <div class="alert alert-light">Вы не указали свое местоположение</div>
+                    {{/if}}
+                    <div class="alert footer__icon-title">Подписаться</div>
+                    <ul class="footer__icon-box">
+                        <li class="footer__item-icon">
+                            <a href="#" class="btn footer__item footer__item--social" id="twitt"></a>
                         </li>
-                    {{/each}}
-                </ul>
-            {{else}}
-                <div class="alert alert-primary">Вы не указали свое местоположение</div>
-            {{/if}}
-            <div class="alert footer__icon-title">Подписаться</div>
-            <ul class="footer__icon-box">
-                <li class="footer__item-icon">
-                    <a href="#" class="btn footer__item footer__item--social" id="twitt"></a>
-                </li>
-                <li class="footer__item-icon">
-                    <a href="#" class="btn footer__item footer__item--social" id="vk"></a>
-                </li>
-                <li class="footer__item-icon">
-                    <a href="#" class="btn footer__item footer__item--social" id="inst"></a>
-                </li>
-                <li class="footer__item-icon">
-                    <a href="#" class="btn footer__item footer__item--social" id="in"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-4 footer__service">
-           <div class="footer__service-content-box">
-               <div class="alert footer__service-title">Услуги</div>
-               <ul class="list-group footer__service-list">
-                   <li class="list-group-item footer__service-item is-item">Устная консультация для граждан</li>
-                   <li class="list-group-item footer__service-item is-item">Устная консультация для граждан с изучением документов</li>
-                   <li class="list-group-item footer__service-item is-item">Письменная консультация для граждан</li>
-                   <li class="list-group-item footer__service-item is-item">Составление претензии</li>
-                   <li class="list-group-item footer__service-item is-item">Составление гражданско-правовых, трудовых договоров</li>
-                   <li class="list-group-item footer__service-item is-item">Составление сложных (смешанные формы), нестандартных договоров</li>
-                   <li class="list-group-item footer__service-item is-item">Правовая экспертиза договоров, иных документов</li>
-                   <li class="list-group-item footer__service-item is-item">Составление процессуальных документов (иск, отзыв на иск и т.п.)</li>
-               </ul>  
-           </div> 
-        </div>
-        <div class="col-4 footer__contact">
-            <div class="footer__contact-content-box">
-                <div class="alert footer__contact-title">Бесплатная консультация</div>
-                <div class="alert footer__support">
-                    <div class="footer__call-btn"></div>
-                    <div class="footer__phone-number">{{phone}}</div>
+                        <li class="footer__item-icon">
+                            <a href="#" class="btn footer__item footer__item--social" id="vk"></a>
+                        </li>
+                        <li class="footer__item-icon">
+                            <a href="#" class="btn footer__item footer__item--social" id="inst"></a>
+                        </li>
+                        <li class="footer__item-icon">
+                            <a href="#" class="btn footer__item footer__item--social" id="in"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 footer__service">
+                    <div class="footer__service-content-box">
+                        <div class="alert footer__service-title">Услуги</div>
+                            {{#if priceList}}
+                                <ul class="list-group footer__service-list">
+                                    {{#each priceList}}
+                                        <li class="list-group-item footer__service-item is-item">
+                                            {{this.name}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{else}}
+                                <div class="alert alert-light">Добавьте услуги</div>
+                            {{/if}}
+                    </div> 
+                </div>
+                <div class="col-4 footer__contact">
+                    <div class="footer__contact-content-box">
+                        <div class="alert footer__contact-title">Бесплатная консультация</div>
+                        <div class="alert footer__support">
+                            <div class="footer__call-btn"></div>
+                            <div class="footer__phone-number">{{phone}}</div>
+                        </div>
+                    </div>
+                    <div class="alert footer__copyright">Copyright © Денис Шклярский {{year}}</div>
                 </div>
             </div>
-            <div class="alert footer__copyright">Copyright © Денис Шклярский {{year}}</div>
         </div>
-    </div>
-</div>
+    </footer>
+{{/if}}
