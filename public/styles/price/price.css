@@ -54,6 +54,11 @@
     background: #0d6efd;
 }
 
+.price__text--multiple {
+    margin-left: 10px;
+    border-radius: 0;
+}
+
 .price__header {
     font-size: 20px;
     color: #fff;
@@ -67,6 +72,16 @@
 .price__underline {
     color: #fff;
     opacity: 1;
+}
+
+.price__redirect {
+    padding-left: 0;
+}
+
+.price__redirect-btn {
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 0;
 }
 
 @media screen and (min-width: 1200px) {
