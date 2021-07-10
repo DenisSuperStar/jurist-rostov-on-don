@@ -21,10 +21,14 @@ const port = 3000;
 
 // сохранение данных о пользователях
 const users = [];
+const filter = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
 
 io.on('connection', socket => {
+    console.log('Соединяемся с бд!');
     socket.on('login', user => {
-        if ((user.nick) && (user.email)) {
+        const email = filter.test(user.email);
+        
+        if ((user.nick) && (email)) {
             users.push(user.nick);
             io.emit('login', {status: 'OK'});
 
