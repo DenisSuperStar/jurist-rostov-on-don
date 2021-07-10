@@ -3,7 +3,7 @@ const pricePath = '/models/price.json';
 const access = require('../dataAccess.js');
 
 const { direction, exsistService, aboutService, slides, addressTable } = access(homePath);
-const { table, price } = access(pricePath);
+const { price } = access(pricePath);
 
 const today = new Date();
 const currentYear = today.getFullYear();
@@ -15,9 +15,10 @@ module.exports.index = (req, res) => {
         // инициализация данных из home.json
         direction: direction,
         gallery: exsistService,
-        about: aboutService, 
+        about: aboutService,
         condition: slides,
         address: addressTable,
+        priceList: price,
         phone: '+7 (951) 839-59-39',
         year: currentYear
     });
@@ -26,8 +27,8 @@ module.exports.index = (req, res) => {
 module.exports.price = (req, res) => {
     res.render('priceView', {
         title: 'Прайс-лист',
-        priceTable: table,
-        priceList: price
+        priceList: price,
+        isPrice: true
     });
 }
 
