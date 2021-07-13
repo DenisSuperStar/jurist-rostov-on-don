@@ -111,13 +111,13 @@ app.get('/price', pages.price);
 // обработка запроса по адресу /contacts
 app.get('/contacts', pages.contacts);
 
-// обработка запроса по адресу /dashboard
-app.get('/dashboard', process.getPerson);
+// обработка запроса по адресу /mail
+app.get('/mail', process.getPerson);
+
+app.get('/admin', pages.admin);
 
 // обработка запроса по адресу /404
 app.get('/404', pages.notFound);
 
-// обработка запроса к несуществующей странице
-app.use((req, res) => {
-    res.status(404).sendFile(path.resolve() + '/public/404.html');
-});
+// для всех остальных запросов показываем /404
+app.use(pages.notFound);
