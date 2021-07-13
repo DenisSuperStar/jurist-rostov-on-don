@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row">
+        <div class="d-flex align-items-start tab">
+            <div class="nav flex-column nav-pills me-3 tab__item-box">
+                <button type="button" class="nav-link mt-3 tab__item is-active" data-target="#v-pills-ad">Реклама</button>
+                <button type="button" class="nav-link mt-3 tab__item" data-target="#v-pills-home">Посты</button>
+                <button type="button" class="nav-link mt-3 tab__item" data-target="#v-pills-profile">Услуги</button>
+                <button type="button" class="nav-link mt-3 tab__item" data-target="#v-pills-messages">Прайс</button>
+                <button type="button" class="nav-link mt-3 tab__item" data-target="#v-pills-settings">Условия сотрудничества</button>
+            </div>
+            <div class="tab-content tab__content-box">
+                <div class="tab-pane fade show tab__item-content is-active" id="v-pills-ad">
+                    <form class="tab__upload-data">
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Наименование слогана">
+                            </label>
+                        </div>
+                        <div class="mb-2 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Описание слогана">
+                            </label>
+                        </div>
+                        <div class="tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="submit" class="btn btn-primary tab__btn" value="Добавить баннер">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade show tab__item-content" id="v-pills-home">
+                    <form class="tab__upload-data">
+                        <div class="mb-1 row">
+                            <div class="col-6">
+                                <label class="form-label tab__input-box">
+                                    <input type="number" class="form-control tab__input" placeholder="Номер поста">
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label tab__input-box">
+                                    <input type="text" class="form-control tab__input" placeholder="Название раздела">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Название поста">
+                            </label>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Текст поста">
+                            </label>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="file" class="form-control form-control-lg tab__input">
+                            </label>
+                        </div>
+                        <div class="tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="submit" class="btn btn-primary tab__btn" value="Загрузить пост">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade tab__item-content" id="v-pills-profile">
+                    <form class="tab__upload-data">
+                        <div class="mb-2 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="file" class="form-control tab__input">
+                            </label>
+                        </div>
+                        <div class="mb-2 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Название услуги">
+                            </label>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Краткое описание">
+                            </label>
+                        </div>
+                        <div class="tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="submit" class="btn btn-primary tab__btn" value="Добавить услугу">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade tab__item-content" id="v-pills-messages">
+                    <form class="tab__upload-data">
+                        <div class="mb-2 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Наименование услуги">
+                            </label>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Описание">
+                            </label>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Цена (руб)">
+                            </label>
+                        </div>
+                        <div class="tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="submit" class="btn btn-primary tab__btn" value="Заполнить прайс">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade tab__item-content" id="v-pills-settings">
+                    <form class="tab__upload-data">
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Название слайда">
+                            </label>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Текст слайда">
+                            </label>
+                        </div>
+                        <div class="mb-1 tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="text" class="form-control tab__input" placeholder="Комментарий (необязательно)">
+                            </label>
+                        </div>
+                        <div class="tab__input-distance">
+                            <label class="form-label tab__input-box">
+                                <input type="submit" class="btn btn-primary tab__btn" value="Загрузить слайд">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
