@@ -22,7 +22,7 @@ module.exports.createPerson = (req, res) => {
 }
 
 module.exports.getPerson = (req, res) => {
-    res.render('dashboard', {
+    res.render('mailView', {
         title: 'Заявки пользователей',
         persons: User.getAll()
     });

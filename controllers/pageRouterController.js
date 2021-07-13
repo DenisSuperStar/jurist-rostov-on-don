@@ -39,6 +39,12 @@ module.exports.contacts = (req, res) => {
     });
 }
 
+module.exports.admin = (req, res) => {
+    res.render('adminView.hbs', {
+        title: 'Панель расширенных возможностей'
+    });
+}
+
 module.exports.notFound = (req, res) => {
     res.render('404', {
         title: 'Запрашиваемая страница не была найдена',
