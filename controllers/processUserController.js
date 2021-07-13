@@ -24,6 +24,8 @@ module.exports.createPerson = (req, res) => {
 module.exports.getPerson = (req, res) => {
     res.render('mailView', {
         title: 'Заявки пользователей',
-        persons: User.getAll()
+        persons: User.getAll(),
+        isHidden: true,
+        isInvisible: true
     });
 }

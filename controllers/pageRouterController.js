@@ -28,7 +28,9 @@ module.exports.price = (req, res) => {
     res.render('priceView', {
         title: 'Прайс-лист',
         priceList: price,
-        isPrice: true
+        isHidden: true,
+        isPrice: true,
+        isInvisible: true
     });
 }
 
@@ -41,7 +43,9 @@ module.exports.contacts = (req, res) => {
 
 module.exports.admin = (req, res) => {
     res.render('adminView.hbs', {
-        title: 'Панель расширенных возможностей'
+        title: 'Панель расширенных возможностей',
+        isHidden: true,
+        isInvisible: true
     });
 }
 
