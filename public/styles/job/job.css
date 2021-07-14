@@ -15,8 +15,6 @@
 
 .job__text {
     width: calc(50% - .75rem);
-    padding-left: 3.75rem;
-    padding-right: 0;
 }
 
 .job__title {
@@ -33,4 +31,42 @@
 
 .job__description {
     font-size: 20px;
+}
+
+@media screen and (min-width: 577px) {
+    .job__text {
+        padding-left: 3.75rem;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .job__holder-box {
+        margin: 0;
+    }
+
+    .job__img-box {
+        display: none;
+    }
+
+    .job__text {
+        width: 100%;
+    }
+
+    .job__title {
+        font-size: .75rem;
+        color: #0d6efd;
+        padding: 0 0 1.5rem 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .job__description-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .job__description {
+        font-size: 18px;
+    }
 }

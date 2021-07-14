@@ -1,0 +1,37 @@
+.content__holder-box {
+    margin: 0;
+}
+
+.content__holder {
+    width: 100%;
+}
+
+.content__holder:last-child,
+.content__description-box {
+    padding: 0;
+}
+
+.content__contact-form-box {
+    margin: 0 .2rem;
+}
+
+.content__text {
+    width: 100%;
+    margin: 0;
+}
+
+.content__title {
+    font-size: .75rem;
+    text-align: center;
+    color: #0d6efd;
+    padding-bottom: 1.5rem;
+}
+
+.content__description-box {
+    padding: 0;
+    text-align: center;
+}
+
+.content__description {
+    font-size: 18px;
+}

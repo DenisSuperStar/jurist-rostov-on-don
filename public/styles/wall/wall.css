@@ -36,6 +36,14 @@
 }
 
 @media screen and (max-width: 576px) {
+    .wall__holder:first-child {
+        width: 100%;
+    }
+
+    .wall__holder:last-child {
+        display: none;
+    }
+
     .wall__subtitle-box {
         padding: 0;
     }
