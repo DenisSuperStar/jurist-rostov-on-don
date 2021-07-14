@@ -23,3 +23,34 @@
     background-size: cover;
     height: 100%;
 }
+
+@media screen and (max-width: 576px) {
+    .we__holder-box {
+        margin: 0;
+    }
+
+    .we__holder {
+        width: 100%;
+    }
+
+    .we__holder > .we__item:last-child {
+        margin-top: 1.5rem;
+    }
+
+    .we__title {
+        font-size: .75rem;
+        color: #0d6efd;
+        padding-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .we__description-box {
+        width: 100%;
+        margin-bottom: 0 !important;
+        text-align: center;
+    }
+
+    .we__description {
+        font-size: 18px;
+    }
+}
