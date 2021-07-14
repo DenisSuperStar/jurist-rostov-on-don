@@ -38,7 +38,6 @@
     }
 
     .we__title {
-        font-size: .75rem;
         color: #0d6efd;
         padding-bottom: 1.5rem;
         text-align: center;
@@ -50,8 +49,21 @@
         margin-bottom: 0 !important;
         text-align: center;
     }
+}
+
+@media screen and (min-width: 360px) and (max-width: 576px) {
+    .we__title {
+        font-size: .75rem;
+    }
 
     .we__description {
         font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .we__title,
+    .we__description {
+        font-size: 15px;
     }
 }

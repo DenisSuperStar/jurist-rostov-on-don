@@ -13,6 +13,9 @@
 .me__description-box {
     width: 370px;
     padding-bottom: 3.75rem;
+}
+
+.me__description {
     font-size: 20px;
 }
 
@@ -37,7 +40,6 @@
 
     .me__title,
     .me__subtitle {
-        font-size: .75rem;
         color: #0d6efd;
         text-align: center;
         margin: 0;
@@ -58,8 +60,23 @@
         text-align: center;
         order: 3;
     }
+}
+
+@media screen and (min-width: 360px) and (max-width: 576px) {
+    .me__title,
+    .me__subtitle {
+        font-size: .75rem;
+    }
 
     .me__description {
         font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .me__title,
+    .me__subtitle,
+    .me__description {
+        font-size: 15px;
     }
 }

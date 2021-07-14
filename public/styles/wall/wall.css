@@ -76,6 +76,17 @@
     .wall__description {
         display: inline-block;
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 576px) {
+    .wall__description {
         font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .wall__description {
+        font-size: 17px;
     }
 }
