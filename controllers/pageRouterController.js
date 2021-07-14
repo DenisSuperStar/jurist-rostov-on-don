@@ -52,6 +52,7 @@ module.exports.admin = (req, res) => {
 module.exports.notFound = (req, res) => {
     res.render('404', {
         title: 'Запрашиваемая страница не была найдена',
-        isHidden: true
+        isHidden: true,
+        isInvisible: true
     });
 }
