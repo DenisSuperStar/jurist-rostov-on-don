@@ -938,7 +938,7 @@ ul{
    overflow:hidden;
 }
 .contacts__title-box--small{
-   text-align:center;
+   text-align:center !important;
    padding-left:2.8rem;
 }
 .contacts__title-box{
