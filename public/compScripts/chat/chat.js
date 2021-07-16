@@ -56,7 +56,7 @@ $(() => {
                                 <div class="alert new-message__user-email-val">${data.email}</div>
                             </div>
                             <div class="col-2 new-message__user-email-val-box">
-                                <div class="alert new-message__send-msg">${data.time}</div>
+                                <div class="alert new-message__sent-msg">${data.time}</div>
                             </div>
                         </div>
                         <div class="alert new-message__chat-message">${data.msg}</div>

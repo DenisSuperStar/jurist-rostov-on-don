@@ -101,10 +101,10 @@ ul{
    padding:0 30px;
    list-style:none;
 }
-.show{
+.showing{
    margin-top:-120px;
 }
-.service__visible-description{
+.service__visibility-description{
    padding-left:.35em;
    padding-right:1.7em;
 }
@@ -263,7 +263,7 @@ ul{
    background:transparent;
    font-size:1.55rem;
 }
-.new-message__send-msg{
+.new-message__sent-msg{
    padding:0;
    border-radius:0;
    border:none;
@@ -301,7 +301,7 @@ ul{
 .index__cm-navbar > .index__cm-item{
    position:relative;
 }
-.index__cm-link:hover + .index__cm-dropdown-menu{
+.index__cm-link:hover + .index__cm-dropdowner-menu{
    opacity:1;
 }
 .index__cm-link{
@@ -314,7 +314,7 @@ ul{
 .index__cm-item:last-child{
    padding-right:0;
 }
-.index__cm-item:hover > .index__cm-link + .index__cm-dropdown-menu{
+.index__cm-item:hover > .index__cm-link + .index__cm-dropdowner-menu{
    animation:dropAnim .3s ease-in-out forwards;
 }
 .index__cm-item.is-active > .index__cm-link:hover{
@@ -342,18 +342,18 @@ ul{
    background:#0d6efd;
    transition:.5s;
 }
-.index__cm-item > .index__cm-dropdown-menu{
+.index__cm-item > .index__cm-dropdowner-menu{
    position:absolute;
    width:160px;
 }
 .index__cm-item{
    padding:0 35px 0 0;
 }
-.index__cm-dropdown-menu .index__cm-link{
+.index__cm-dropdowner-menu .index__cm-link{
    color:#0d6efd;
    padding:0;
 }
-.index__cm-dropdown-menu{
+.index__cm-dropdowner-menu{
    background:transparent;
    margin:0;
    padding:0;
@@ -492,12 +492,40 @@ ul{
    position:relative;
    transform:translateY(-100%);
 }
-.form-message__send-btn:hover{
+.form-message__submit-box{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+.form-message__input{
+   width:100%;
+   height:calc(54.4px * 1.5);
+   border-radius:0;
+   background:rgba(255,255,255,.1);
+   color:#fff;
+   border:none;
+   cursor:pointer;
+   font-size:1.55rem;
+}
+.form-message__input:focus{
+   width:100%;
+   height:calc(54.4px * 1.5);
+   border-radius:0;
+   background:rgba(255,255,255,.1);
+   color:#fff;
+   border:none;
+   cursor:pointer;
+   font-size:1.55rem;
+}
+.form-message__input::placeholder{
+   color:#fff;
+}
+.form-message__submit-btn:hover{
    box-shadow:0 0 0 3em #fff inset;
    color:#0d6efd;
    transition:all 300ms ease;
 }
-.form-message__send-btn{
+.form-message__submit-btn{
    display:block;
    width:100%;
    padding-top:0;
@@ -513,34 +541,6 @@ ul{
    text-transform:uppercase;
    border-radius:0;
    font-weight:700;
-}
-.form-message__send-box{
-   display:flex;
-   justify-content:center;
-   align-items:center;
-}
-.form-message__input:focus{
-   width:100%;
-   height:calc(54.4px * 1.5);
-   border-radius:0;
-   background:rgba(255,255,255,.1);
-   color:#fff;
-   border:none;
-   cursor:pointer;
-   font-size:1.55rem;
-}
-.form-message__input::placeholder{
-   color:#fff;
-}
-.form-message__input{
-   width:100%;
-   height:calc(54.4px * 1.5);
-   border-radius:0;
-   background:rgba(255,255,255,.1);
-   color:#fff;
-   border:none;
-   cursor:pointer;
-   font-size:1.55rem;
 }
 .form-message__content-box{
    padding:0;
@@ -650,12 +650,6 @@ ul{
    box-shadow:0 0 0 1px #0d6efd inset;
    transition:all 280ms ease;
 }
-.footer__logo::after{
-   content:'\f42a';
-   font-family:'Font Awesome 5 Brands';
-   font-size:27px;
-   color:#fff;
-}
 .footer__logo-box{
    display:flex;
    margin-top:30px;
@@ -671,6 +665,12 @@ ul{
    color:#fff;
    border-radius:0;
    margin:0;
+}
+.footer__logo::after{
+   content:'\f42a';
+   font-family:'Font Awesome 5 Brands';
+   font-size:27px;
+   color:#fff;
 }
 .footer__item-icon:hover > .footer__item{
    color:#0d6efd;
@@ -873,7 +873,7 @@ ul{
    right:0;
    background:#0d6efd;
 }
-.direction__equally{
+.direction__section{
    position:relative;
    padding:240px 120px 7.5rem 30px;
    z-index:8;
@@ -1415,14 +1415,14 @@ ul{
    align-items:center;
    height:300px;
 }
-.btn-scroll__up:hover::after{
+.btn-scroll__upper:hover::after{
    color:#0d6efd;
 }
-.btn-scroll__up:hover > .btn-scroll__input{
+.btn-scroll__upper:hover > .btn-scroll__input{
    box-shadow:0 0 0 3em #fff inset;
    transition:all 280ms ease;
 }
-.btn-scroll__up::after{
+.btn-scroll__upper::after{
    position:absolute;
    left:0;
    width:100%;
@@ -1434,7 +1434,7 @@ ul{
    top:0;
    margin-top:15px;
 }
-.btn-scroll__up{
+.btn-scroll__upper{
    margin-bottom:.5rem;
    cursor:pointer;
 }
@@ -1452,14 +1452,14 @@ ul{
    font-weight:700;
    box-shadow:0 0 0 2px transparent inset;
 }
-.btn-scroll__down:hover::after{
+.btn-scroll__lower:hover::after{
    color:#0d6efd;
 }
-.btn-scroll__down:hover > .btn-scroll__input{
+.btn-scroll__lower:hover > .btn-scroll__input{
    box-shadow:0 0 0 3em #fff inset;
    transition:all 280ms ease;
 }
-.btn-scroll__down::after{
+.btn-scroll__lower::after{
    position:absolute;
    left:0;
    width:100%;
@@ -1471,7 +1471,7 @@ ul{
    bottom:0;
    margin-bottom:15px;
 }
-.btn-scroll__down{
+.btn-scroll__lower{
    cursor:pointer;
 }
 .btn-scroll{
@@ -1569,7 +1569,7 @@ ul{
       margin:0 50px;
       padding:0 10px;
    }
-   .service__visible-description{
+   .service__visibility-description{
       padding:0;
       width:100%;
    }
@@ -1602,10 +1602,10 @@ ul{
       text-align:center;
       cursor:pointer;
    }
-   .header__menu-humb-dropdown-box:not(.is-open){
+   .header__menu-humb-dropdowner-box:not(.is-open){
       display:none;
    }
-   .header__menu-humb-dropdown-box{
+   .header__menu-humb-dropdowner-box{
       position:absolute;
       top:0;
       left:calc(50% - 20px);
@@ -1646,7 +1646,7 @@ ul{
       position:static;
       margin-bottom:7.5rem;
    }
-   .direction__equally{
+   .direction__section{
       width:100%;
       margin:0;
    }
@@ -1664,10 +1664,10 @@ ul{
    .direction__banner{
       display:none;
    }
-   .direction:last-child .direction__equally{
+   .direction:last-child .direction__section{
       padding:0;
    }
-   .direction:first-child .direction__equally{
+   .direction:first-child .direction__section{
       padding:0 0 7.5rem 0;
    }
    .contacts__title-box--small{
@@ -1752,7 +1752,7 @@ ul{
       right:auto;
    }
 }@media screen and (max-width:576px){
-   .form-message__send-box{
+   .form-message__submit-box{
       width:100%;
    }
    .form-message__input-box{
@@ -1910,7 +1910,7 @@ ul{
       padding:0 0 20px 0;
    }
 }@media screen and (min-width:992px) and (max-width:1199px){
-   .service__visible-description{
+   .service__visibility-description{
       padding-left:.75em;
       padding-right:.3rem;
    }
