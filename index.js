@@ -5,23 +5,40 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server);
 const path = require('path');
-const expHbs = require('express-handlebars');
+const expressHandlebars = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
 const process = require('./controllers/processUserController.js');
 const minify = require('express-minify');
 const uglify = require('uglify-js');
 const cssMin = require('cssmin');
+// порт
+const { port } = require('./config/config.js');
+// настройки подключения к бд
+const { host } = require('./config/config.js');
+const { databaseName } = require('./config/config.js');
+const { databaseConf } = require('./config/config.js');
+// настройки таймера
 const { online } = require('./credit/credit.js');
 const { time } = require('./credit/credit.js');
 let timeServer = time;
 const timeStartOnline = online;
 let timeOnline;
-// установка значения порта
-const port = 3000;
-
 // сохранение данных о пользователях
 const users = [];
+// проверка email по регулярному
 const filter = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+// подключение драйвера ORM для работы с бд
+const mongoose = require('mongoose');
+// модули для донастройки шаблона hbs
+const Handlebars = require('handlebars');
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
+
+mongoose.connect(`mongodb://${host}/${databaseName}`, databaseConf, err => {
+    if (err) throw err;
+    server.listen(port, () => {
+        console.log(`Сервер запущен на порту ${port}`);
+    });
+});
 
 io.on('connection', socket => {
     console.log('Соединяемся с бд!');
@@ -30,7 +47,7 @@ io.on('connection', socket => {
         
         if ((user.nick) && (email)) {
             users.push(user.nick);
-            io.emit('login', {status: 'OK'});
+            io.emit('login', {status: 'OK'}); // важен только статус
 
             timeOnline = setInterval(() => {
                 if (timeServer < 1) {
@@ -41,8 +58,6 @@ io.on('connection', socket => {
                         io.emit('disconnected', {disconnect: 'OK'});
                     });
                 }
-                // временно присутствует для отслеживания timeServer
-                console.log(timeServer);
                 timeServer--;
             }, timeStartOnline);
         } else {
@@ -69,13 +84,13 @@ const urlEncodedParser = bodyParser.urlencoded({
     extended: false
 });
 
-server.listen(port, () => {
-    console.log(`Сервер запущен на порту ${port}`);
-});
 
-const createHbs = expHbs.create({
+
+// создание объекта с настройками шаблонизатора
+const createHbs = expressHandlebars.create({
     defaultLayout: 'main',
-    extname: 'hbs'
+    extname: 'hbs',
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
 });
 
 app.use(minify({
