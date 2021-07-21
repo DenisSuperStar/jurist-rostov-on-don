@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Rostov Node js application",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DenisSuperStar/jurist-rostov-on-don.git"
+  },
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
