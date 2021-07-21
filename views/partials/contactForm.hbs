@@ -34,7 +34,15 @@
             <textarea class="form-control contact-form__detail" rows="5" name="userMessage"></textarea>
         </label>
     </div>
+    <div class="row checkbox">
+        <div class="form-check checkbox__form-checkbox">
+            <label class="form-check-label checkbox__form-content">
+                <span class="checkbox__checkbox-text">Я даю согласие на обработку персональных данных</span>
+                <input type="checkbox" class="form-check-input checkbox__input">
+            </label>
+        </div>
+    </div>
     <div class="contact-form__btn-box">
-        <input type="submit" class="btn contact-form__btn" id="is-send" value="Отправить">
+        <input type="submit" class="btn contact-form__btn" id="is-send" value="Отправить" disabled>
     </div>
 </form>

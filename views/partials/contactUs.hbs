@@ -18,7 +18,8 @@
                                     class="form-control contact__input" 
                                     id="nickName" 
                                     placeholder="Имя"
-                                    autocomplete="off" 
+                                    autocomplete="off"
+                                    name="nickName" 
                                     required
                                 >
                             </label>
@@ -28,7 +29,8 @@
                                     class="form-control contact__input" 
                                     id="email" 
                                     placeholder="E-mail"
-                                    autocomplete="off" 
+                                    autocomplete="off"
+                                    name="email" 
                                     required
                                 >
                             </label>
@@ -62,11 +64,16 @@
                             class="form-control form-message__input"
                             autocomplete="off"
                             placeholder="Напишите сообщение..."
+                            name="message"
                             id="messageInput"
                         >
                     </div>
                     <div class="col-2 form-message__submit-box">
-                        <button type="submit" class="btn btn-light form-message__submit-btn">Отправить</button>
+                        <button 
+                            type="submit" 
+                            class="btn btn-light form-message__submit-btn"
+                            id="formMessage"
+                        >Отправить</button>
                     </div>
                 </div>
             </div>
