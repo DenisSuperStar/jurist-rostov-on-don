@@ -1,4 +1,4 @@
-const User = require('../models/user.js');
+const Person = require('../models/person.js');
 
 module.exports.addPerson = (req, res) => {
     res.render('aboutView', {
@@ -15,17 +15,27 @@ module.exports.createPerson = (req, res) => {
 
     if (!uName || !uEmail || !uPhone || !uMessage) return res.sendStatus(400);
 
-    const person = new User(uName, uEmail, uPhone, uMessage);
-    person.save();
+    const person = new Person({
+        userName: uName,
+        userEmail: uEmail,
+        userPhone: uPhone,
+        userMessage: uMessage
+    });
 
-    res.redirect('/about');
+    person.save(err => {
+        if (err) return res.sendStatus(500);
+        res.redirect('/about');
+    });
 }
 
 module.exports.getPerson = (req, res) => {
-    res.render('mailView', {
-        title: 'Заявки пользователей',
-        persons: User.getAll(),
-        isHidden: true,
-        isInvisible: true
+    Person.find({}, (err, allPerson) => {
+        if (err) return res.sendStatus(500);
+        res.render('mailView', {
+            title: 'Заявки пользователей',
+            persons: allPerson,
+            isHidden: true,
+            isInvisible: true
+        });
     });
 }
