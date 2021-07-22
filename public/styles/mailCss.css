@@ -1,0 +1,57 @@
+.dashboard__title {
+    color: #0d6efd;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .dashboard__user-name {
+    color: #191919;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 22.8px;
+  }
+
+  .dashboard__user-message,
+  .dashboard__user-email,
+  .dashboard__user-phone {
+    background: #0d6efd;
+    color: #fff;
+    padding: 1.4em 1.7em;
+  }
+
+  .dashboard__hr {
+    background: #0d6efd;
+  }
+
+  @media screen and (max-width: 576px) {
+    .dashboard__title {
+      font-size: .75rem;
+    }
+
+    .dashboard__email {
+      font-size: 17px;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 359px) {
+    .dashboard__user-name,
+    .dashboard__user-message {
+      font-size: 17px;
+    }
+
+    .dashboard__user-phone {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 576px) {
+    .dashboard__user-name,
+    .dashboard__user-message {
+      font-size: 19px;
+    }
+
+    .dashboard__user-phone {
+      font-size: 16px;
+    }
+  }
