@@ -1,0 +1,4 @@
+$(() => {
+    $('#uploadPost').fileinput();
+    $('#uploadService').fileinput();
+})
