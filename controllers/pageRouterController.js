@@ -1,36 +1,42 @@
-const homePath = '/models/home.json';
-const pricePath = '/models/price.json';
-const access = require('../dataAccess.js');
-
-const { direction, exsistService, aboutService, slides, addressTable } = access(homePath);
-const { price } = access(pricePath);
-
 const today = new Date();
 const currentYear = today.getFullYear();
+const indexFake = '/models/home.json';
+const access = require('../dataAccess.js');
+const { aboutService, slideService, addressTable } = access(indexFake);
+const Main = require('../models/main.js');
+const Order = require('../models/order.js');
+const Person = require('../models/person.js');
 
 module.exports.index = (req, res) => {
-    res.render('indexView', {
-        title: 'Оказание юридических услуг жителям Юрист-на-Дону, г.Ростова и Ростовской области',
-        isIndex: true,
-        // инициализация данных из home.json
-        direction: direction,
-        gallery: exsistService,
-        about: aboutService,
-        condition: slides,
-        address: addressTable,
-        priceList: price,
-        phone: '+7 (951) 839-59-39',
-        year: currentYear
+    Main.find({}, (err, allItem) => {
+        if (err) return res.sendStatus(500);
+        res.render('indexView', {
+            title: 'Оказание юридических услуг жителям Юрист-на-Дону, г.Ростова и Ростовской области',
+            isIndex: true,
+            ads: allItem.ad,
+            direction: allItem.activity,
+            gallery: allItem.service,
+            about: aboutService,
+            condition: slideService,
+            address: addressTable,
+            priceList: allItem.order,
+            phone: '+7 (951) 839-59-39',
+            year: currentYear
+        });
     });
 }
 
 module.exports.price = (req, res) => {
-    res.render('priceView', {
-        title: 'Прайс-лист',
-        priceList: price,
-        isHidden: true,
-        isPrice: true,
-        isInvisible: true
+    Order.find({}, (err, allOrders) => {
+        if (err) return res.sendStatus(500);
+
+        res.render('priceView', {
+            title: 'Прайс-лист',
+            priceList: allOrders,
+            isHidden: true,
+            isPrice: true,
+            isInvisible: true
+        });
     });
 }
 
@@ -41,11 +47,14 @@ module.exports.contacts = (req, res) => {
     });
 }
 
-module.exports.admin = (req, res) => {
-    res.render('adminView.hbs', {
-        title: 'Панель расширенных возможностей',
-        isHidden: true,
-        isInvisible: true
+module.exports.dashboard = (req, res) => {
+    Person.find({}, (err, allPerson) => {
+        if (err) return res.sendStatus(500);
+        res.render('dashboardView', {
+            title: 'Панель расширенных возможностей',
+            isHidden: true,
+            isInvisible: true
+        });
     });
 }
 
