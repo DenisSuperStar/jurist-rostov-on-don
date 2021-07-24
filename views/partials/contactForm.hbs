@@ -1,4 +1,4 @@
-<form action="/about" class="row g-2 contact-form" id="contactForm" name="sendForm" method="post">
+<form action="/about" class="row g-2 contact-form" method="post">
     <h3 class="contact-form__title">Оставьте заявку</h3>
     <div class="row g-2 contact-form__holder-box">
         <div class="col-6 contact-form__item">
@@ -6,7 +6,14 @@
                 <div class="contact-form__name-box">
                     <span class="contact-form__input-name">Ваше имя</span>
                 </div>
-                <input type="text" class="form-control contact-form__input" placeholder="Имя" name="userName" required>
+                <input 
+                    type="text" 
+                    class="form-control contact-form__input" 
+                    placeholder="Имя" 
+                    name="userName"
+                    autocomplete="off" 
+                    required
+                >
             </label>
         </div>
         <div class="col-6 contact-form__item">
@@ -14,7 +21,14 @@
                 <div class="contact-form__name-box">
                     <span class="contact-form__input-name">E-mail</span>
                 </div>
-                <input type="text" class="form-control contact-form__input" placeholder="E-mail" name="userEmail" required>
+                <input 
+                    type="text" 
+                    class="form-control contact-form__input" 
+                    placeholder="E-mail" 
+                    name="userEmail"
+                    autocomplete="off" 
+                    required
+                >
             </label>
         </div>
     </div>
@@ -23,7 +37,14 @@
             <div class="contact-form__name-box">
                 <span class="contact-form__input-name">Номер телефона</span>
             </div>
-            <input type="text" class="form-control contact-form__input" placeholder="Телефон" name="userPhone" required>
+            <input 
+                type="text" 
+                class="form-control contact-form__input" 
+                placeholder="Телефон" 
+                name="userPhone"
+                autocomplete="off" 
+                required
+            >
         </label>
     </div>
     <div class="row contact-form__item contact-form__item--full">
@@ -31,18 +52,32 @@
             <div class="contact-form__name-box">
                 <span class="contact-form__input-name">Ваше сообщение</span>
             </div>
-            <textarea class="form-control contact-form__detail" rows="5" name="userMessage"></textarea>
+            <textarea 
+                class="form-control contact-form__detail" 
+                rows="5" 
+                name="userMessage"
+            >
+            </textarea>
         </label>
     </div>
     <div class="row checkbox">
         <div class="form-check checkbox__form-checkbox">
             <label class="form-check-label checkbox__form-content">
                 <span class="checkbox__checkbox-text">Я даю согласие на обработку персональных данных</span>
-                <input type="checkbox" class="form-check-input checkbox__input">
+                <input 
+                    type="checkbox" 
+                    class="form-check-input checkbox__input"
+                >
             </label>
         </div>
     </div>
     <div class="contact-form__btn-box">
-        <input type="submit" class="btn contact-form__btn" id="is-send" value="Отправить" disabled>
+        <input 
+            type="submit" 
+            class="btn contact-form__btn" 
+            id="is-send" 
+            value="Отправить" 
+            disabled
+        >
     </div>
 </form>
