@@ -98,7 +98,7 @@
         }
     ],
     
-    "slides": [
+    "slideService": [
         {
             "slideId": 1,
             "bgTitle": "Обращение в компанию",
