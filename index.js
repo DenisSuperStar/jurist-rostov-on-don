@@ -8,6 +8,7 @@ const path = require('path');
 const expressHandlebars = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
 const process = require('./controllers/processUserController.js');
+const upload = require('./controllers/uploadDataController.js');
 const minify = require('express-minify');
 const uglify = require('uglify-js');
 const cssMin = require('cssmin');
@@ -41,7 +42,6 @@ mongoose.connect(`mongodb://${host}/${databaseName}`, databaseConf, err => {
 });
 
 io.on('connection', socket => {
-    console.log('Соединяемся с бд!');
     socket.on('login', user => {
         const email = filter.test(user.email);
         
@@ -54,7 +54,6 @@ io.on('connection', socket => {
                     clearInterval(timeOnline);
                     socket.disconnect(true);
                     socket.on('disconnect', () => {
-                        console.log('Разрываем соединение с бд!');
                         io.emit('disconnected', {disconnect: 'OK'});
                     });
                 }
@@ -73,7 +72,6 @@ io.on('connection', socket => {
         clearInterval(timeOnline);
         timeServer = 600;
         console.log(timeServer);
-        console.log('Разрываем соединение с бд!');
     });
 });
 
@@ -83,8 +81,6 @@ const bodyParser = require('body-parser');
 const urlEncodedParser = bodyParser.urlencoded({
     extended: false
 });
-
-
 
 // создание объекта с настройками шаблонизатора
 const createHbs = expressHandlebars.create({
@@ -129,7 +125,11 @@ app.get('/contacts', pages.contacts);
 // обработка запроса по адресу /mail
 app.get('/mail', process.getPerson);
 
-app.get('/admin', pages.admin);
+app.get('/admin', urlEncodedParser, pages.dashboard);
+
+app.post('/admin', urlEncodedParser, upload.uploadAd);
+
+app.post('/admin', urlEncodedParser, upload.uploadItem);
 
 // обработка запроса по адресу /404
 app.get('/404', pages.notFound);
