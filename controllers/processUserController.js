@@ -8,10 +8,11 @@ module.exports.addPerson = (req, res) => {
 }
 
 module.exports.createPerson = (req, res) => {
-    const uName = req.body.userName;
-    const uEmail = req.body.userEmail;
-    const uPhone = req.body.userPhone;
-    const uMessage = req.body.userMessage;
+    const body = JSON.parse(JSON.stringify(req.body));
+    const uName = body.userName;
+    const uEmail  = body.userEmail;
+    const uPhone = body.userPhone;
+    const uMessage = body.userMessage;
 
     if (!uName || !uEmail || !uPhone || !uMessage) return res.sendStatus(400);
 
