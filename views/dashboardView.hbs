@@ -1,5 +1,14 @@
 <div class="container-fluid admin">
     <div class="row admin__content">
+        <div class="col-8 admin__dashboard-menu-box">
+            <div class="dashboard-menu">
+                <div class="dashboard-menu__humburger">
+                    <div class="dashboard-menu__item"></div>
+                    <div class="dashboard-menu__item"></div>
+                    <div class="dashboard-menu__item"></div>
+                </div>
+            </div>
+        </div>
         <div class="col-8 admin__tab-box">
             <div class="d-flex align-items-start tab">
                 <div class="nav flex-column nav-pills tab__item-box">
@@ -14,8 +23,19 @@
                         <div class="tab__redirect">
                             <a href="#" class="btn tab__redirect-link">На главную</a>
                         </div>
-                        <div class="tab__date" id="currentDate">
+                        <div class="tab__panel-attr">
+                            <div class="tab__date" id="currentDate"></div>
+                            <div class="dashboard-menu dashboard-menu--repeating">
+                                <div class="dashboard-menu__bento">
+                                    <div class="dashboard-menu__block"></div>
+                                    <div class="dashboard-menu__block"></div>
+                                    <div class="dashboard-menu__block"></div>
+                                    <div class="dashboard-menu__block"></div>
+                                    <div class="dashboard-menu__block"></div>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
                     <div class="tab-pane fade show tab__item-content is-active" id="v-pills-ad">
                         <form class="tab__upload-data" action="/admin" method="post">
