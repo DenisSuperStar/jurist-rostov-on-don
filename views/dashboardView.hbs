@@ -16,7 +16,6 @@
                     <button type="button" class="nav-link tab__item" data-target="#v-pills-home">Посты</button>
                     <button type="button" class="nav-link tab__item" data-target="#v-pills-profile">Услуги</button>
                     <button type="button" class="nav-link tab__item" data-target="#v-pills-messages">Прайс</button>
-                    <button type="button" class="nav-link tab__item" data-target="#v-pills-settings">Условия</button>
                 </div>
                 <div class="tab-content tab__content-box" id="tabContent">
                     <div class="tab__info">
@@ -226,54 +225,28 @@
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane fade tab__item-content" id="v-pills-settings">
-                        <form class="tab__upload-data">
-                            <div class="mb-1 tab__input-distance">
-                                <label class="form-label tab__input-box">
-                                    <input 
-                                        type="text" 
-                                        class="form-control tab__input" 
-                                        placeholder="Название слайда"
-                                        autocomplete="off"
-                                    >
-                                </label>
-                            </div>
-                            <div class="mb-1 tab__input-distance">
-                                <label class="form-label tab__input-box">
-                                    <input 
-                                        type="text" 
-                                        class="form-control tab__input" 
-                                        placeholder="Текст слайда"
-                                        autocomplete="off"
-                                    >
-                                </label>
-                            </div>
-                            <div class="mb-1 tab__input-distance">
-                                <label class="form-label tab__input-box">
-                                    <input 
-                                        type="text" 
-                                        class="form-control tab__input" 
-                                        placeholder="Комментарий (необязательно)"
-                                        autocomplete="off"
-                                    >
-                                </label>
-                            </div>
-                            <div class="tab__input-distance">
-                                <label class="form-label tab__input-box">
-                                    <input 
-                                        type="submit" 
-                                        class="btn btn-primary tab__btn" 
-                                        value="Загрузить слайд"
-                                    >
-                                </label>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-4 admin__messager-box" style="border: 1px solid red;">
-            <!-- клиентские сообщения -->
+        <div class="col-4 admin__messager-box">
+            <div class="alert message__title-box">
+                <h1 class="alert-heading message__title">{{title}}</h1>
+            </div>
+            {{#if persons}}
+                {{#each persons}}
+                    <div class="alert message__user-info">
+                        <h4 class="alert-heading message__user-info">Имя клиента: {{this.userName}}</h4>
+                        <p class="message__user-message">Сообщение: {{this.userMessage}}</p>
+                        <hr class="message__underline">
+                        <p class="message__user-email">Адрес эл.почты: {{this.userEmail}}</p>
+                        <p class="message__user-phone">{{this.userEmail}} оставил номер телефона: {{this.userPhone}}</p>
+                    </div>
+                {{/each}}
+            {{else}}
+                <div class="alert">
+                    <h4 class="alert-heading">У вас пока нет заявок!</h4>
+                </div>
+            {{/if}}
         </div>
     </div>
 </div>
