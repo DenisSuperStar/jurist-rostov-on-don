@@ -7,8 +7,8 @@ const io = new Server(server);
 const path = require('path');
 const expressHandlebars = require('express-handlebars');
 const pages = require('./controllers/pageRouterController.js');
-const process = require('./controllers/processUserController.js');
-const upload = require('./controllers/uploadDataController.js');
+const process = require('./controllers/processFeedBackController.js');
+const upload = require('./controllers/dashboardUploadController.js');
 const minify = require('express-minify');
 const uglify = require('uglify-js');
 const cssMin = require('cssmin');
@@ -122,14 +122,10 @@ app.get('/price', pages.price);
 // обработка запроса по адресу /contacts
 app.get('/contacts', pages.contacts);
 
-// обработка запроса по адресу /mail
-app.get('/mail', process.getPerson);
-
+// обработка запросов по адресу /admin
 app.get('/admin', urlEncodedParser, pages.dashboard);
-
 app.post('/admin', urlEncodedParser, upload.uploadAd);
-
-app.post('/admin', urlEncodedParser, upload.uploadItem);
+app.post('/admin', urlEncodedParser, upload.uploadOrder);
 
 // обработка запроса по адресу /404
 app.get('/404', pages.notFound);
