@@ -1,4 +1,4 @@
 $(() => {
-    $('#uploadPost').fileinput();
-    $('#uploadService').fileinput();
+    $('#uploadImage').fileinput();
+    $('#uploadIcon').fileinput();
 })
