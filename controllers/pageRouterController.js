@@ -52,6 +52,7 @@ module.exports.dashboard = (req, res) => {
         if (err) return res.sendStatus(500);
         res.render('dashboardView', {
             title: 'Панель расширенных возможностей',
+            persons: allPerson,
             isHidden: true,
             isInvisible: true
         });
