@@ -1,46 +1,61 @@
-module.exports.uploadAd = (req, res) => {
-    const body = JSON.parse(JSON.stringify(req.body));
+const Ad = require('../models/ad.js');
+const Activity = require('../models/activity.js');
+const Order = require('../models/order.js');
+
+module.exports.uploadData = (req, res) => {
+    const {body} = req;
+
     const adName = body.adName;
     const descName = body.descName;
 
-    if (!adName || !descName) return res.sendStatus(404);
+    if (adName && descName) {
+        const ad = new Ad({
+            adName: adName,
+            descName: descName
+        });
 
-    const ad = new Ad({
-        adName: adName,
-        descName: descName
-    });
+        ad.save(err => {
+            if (err) process.exit(-1);
 
-    ad.save(err => {
-        if (err) res.sendStatus(500);
-        res.redirect('/');
-    });
-}
+            res.redirect('/');
+        });
+    } else {}
 
-module.exports.uploadActivity = (req, res) => {
-
-}
-
-module.exports.uploadOrder = (req, res) => {
-    const body = JSON.parse(JSON.stringify(req.body));
-    const serviceName = body.serviceName;
-    const serviceDesc = body.serviceDesc;
-    const servicePrice = body.servicePrice;
-
-    if (!serviceName || !serviceDesc || !servicePrice) return res.sendStatus(404);
-
-    const order = new Order({
-        serviceName: serviceName,
-        serviceDesc: serviceDesc,
-        servicePrice: servicePrice
-    });
-
-    order.save(err => {
-        if (err) re.sendStatus(500);
-        
-        res.redirect('/');
-    });
-}
-
-module.exports.uploadService = (req, res) => {
+    const id = body.number;
+    const title = body.section;
+    const name = body.name;
+    const text = body.text;
     
+    if (id && title && name && text) {
+        const direction = new Activity({
+            ordinal: id,
+            title: title,
+            theme: name,
+            detail: text
+        });
+
+        direction.save(err => {
+            if (err) process.exit(-1);
+
+            res.redirect('/');
+        });
+    } else {}
+
+    const productName = body.serviceName;
+    const productDesc = body.serviceDesc;
+    const productPrice = body.servicePrice;
+
+    if (productName && productDesc && productPrice) {
+        const order = new Order({
+            serviceName: productName,
+            serviceDesc: productDesc,
+            servicePrice: productPrice
+        });
+
+        order.save(err => {
+            if (err) process.exit(-1);
+
+            res.redirect('/');
+        });
+    } else {}
 }

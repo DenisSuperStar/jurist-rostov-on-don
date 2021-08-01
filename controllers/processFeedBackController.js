@@ -8,23 +8,25 @@ module.exports.addPerson = (req, res) => {
 }
 
 module.exports.createPerson = (req, res) => {
-    const body = JSON.parse(JSON.stringify(req.body));
+    const {body} = req;
+
     const uName = body.userName;
-    const uEmail  = body.userEmail;
+    const uEmail = body.userEmail;
     const uPhone = body.userPhone;
-    const uMessage = body.userMessage;
+    const uMessage = body.userMessage;;
 
-    if (!uName || !uEmail || !uPhone || !uMessage) return res.sendStatus(400);
+    if (uName && uEmail && uPhone && uMessage) {
+        const person = new Person({
+            userName: uName,
+            userEmail: uEmail,
+            userPhone: uPhone,
+            userMessage: uMessage
+        });
 
-    const person = new Person({
-        userName: uName,
-        userEmail: uEmail,
-        userPhone: uPhone,
-        userMessage: uMessage
-    });
+        person.save(err => {
+            if (err) process.exit(-1);
 
-    person.save(err => {
-        if (err) return res.sendStatus(500);
-        res.redirect('/about');
-    });
+            res.redirect('/about');
+        });
+    } else {}
 }
