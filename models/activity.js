@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 const { Schema } = require('mongoose');
 
 const activityScheme = new Schema({
-    id: {
-        type: String,
-        required: true
-    },
     ordinal: {
         type: Number,
         required: true
@@ -19,10 +15,6 @@ const activityScheme = new Schema({
         required: true
     },
     detail: {
-        type: String,
-        required: true
-    },
-    url: {
         type: String,
         required: true
     }
