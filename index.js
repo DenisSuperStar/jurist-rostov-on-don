@@ -33,6 +33,8 @@ const mongoose = require('mongoose');
 // модули для донастройки шаблона hbs
 const Handlebars = require('handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
+// подключаем модуль парсинга
+const multer = require('multer');
 
 mongoose.connect(`mongodb://${host}/${databaseName}`, databaseConf, err => {
     if (err) throw err;
@@ -75,12 +77,28 @@ io.on('connection', socket => {
     });
 });
 
-// подключаем модуль парсинга
-const bodyParser = require('body-parser');
-// создаем экземпляр парсера
-const urlEncodedParser = bodyParser.urlencoded({
-    extended: false
+// подключаем модуль загрузки файла
+const storageConfig = multer.diskStorage({
+    destination: (req, fil, cb) => {
+        cb(null, 'uploads/');
+    },
+    filename: (req, file, cb) => {
+        const {originalname} = file;
+
+        cb(null, originalname);
+    }
 });
+
+// настройка фильтра для загружаемых файлов
+/*const filterImage = (req, file, cb) => {
+    const {mimetype} = file;
+
+    if ((mimetype === 'image/jpg') || (mimetype === 'image/jpeg') || (mimetype === 'image/png')) {
+        cb(null, true);
+    } else {
+        cb(null, false);
+    }
+}*/
 
 // создание объекта с настройками шаблонизатора
 const createHbs = expressHandlebars.create({
@@ -106,15 +124,18 @@ app.set('views', './views');
 
 //  обработка запроса к каталогу со статическими файлами
 app.use(express.static(path.resolve() + '/public'));
+app.use(express.bodyParser());
+
+/*app.use(multer({storage:storageConfig, fileFilter: filterImage}).single('uploadImg'));*/
 
 // обработка запроса по корневому адресу /
 app.get('/', pages.index);
 
 // обработка гет-запроса по адресу /about
-app.get('/about', urlEncodedParser, process.addPerson);
+app.get('/about', process.addPerson);
 
 // обработка пост-запроса по адресу /about
-app.post('/about', urlEncodedParser, process.createPerson);
+app.post('/about', process.createPerson);
 
 // обработка запроса по адресу /price
 app.get('/price', pages.price);
@@ -123,9 +144,8 @@ app.get('/price', pages.price);
 app.get('/contacts', pages.contacts);
 
 // обработка запросов по адресу /admin
-app.get('/admin', urlEncodedParser, pages.dashboard);
-app.post('/admin', urlEncodedParser, upload.uploadAd);
-app.post('/admin', urlEncodedParser, upload.uploadOrder);
+app.get('/admin', pages.dashboard);
+app.post('/admin', upload.uploadData);
 
 // обработка запроса по адресу /404
 app.get('/404', pages.notFound);
