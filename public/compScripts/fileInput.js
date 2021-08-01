@@ -1,4 +1,3 @@
 $(() => {
-    $('#uploadImage').fileinput();
     $('#uploadIcon').fileinput();
 })
